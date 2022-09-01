@@ -21,10 +21,6 @@ Route::get('/about', function () {
     return view('about');
 })->name("about");
 
-Route::get('/login', function () {
-    return view('login');
-})->name("login");
-
 Route::get('/my-account', function () {
     return view('my-account');
 })->name("my-account");
@@ -60,3 +56,5 @@ Route::get('/thank-you-page', function () {
 Route::get('/order-tracking', function () {
     return view('order-tracking');
 })->name("order-tracking");
+
+require __DIR__.'/auth.php';

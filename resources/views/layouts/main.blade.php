@@ -1,4 +1,4 @@
-@extends("layout.index")
+@extends("layouts.index")
 
 @section("body")
 <div class="main-wrapper">
@@ -16,8 +16,16 @@
                         <div class="top-nav">
                             <ul>
                                 <li><a href="tel:0123456789"><i class="fa fa-phone"></i> +012 3456 789</a></li>
-                                <li><a href="mailto:demo@example.com"><i class="fa fa-envelope-o"></i> demo@example.com</a></li>
+                                <li><a href="mailto:demo@example.com"><i class="fa fa-envelope-o"></i>
+                                        demo@example.com</a></li>
+                                @if (Route::has('login'))
+                                @auth
                                 <li><a href="{{route('my-account')}}"><i class="fa fa-user"></i> Account</a></li>
+                                @else
+                                <li><a href="{{route('login')}}"><i class="fa fa-user"></i> Log in</a></li>
+                                <li><a href="{{route('register')}}"><i class="fa fa-user"></i> Register</a></li>
+                                @endauth
+                                @endif
                             </ul>
                         </div>
                     </div>
@@ -49,12 +57,14 @@
                                 <i class="pe-7s-like"></i>
                             </a>
                             <!-- Single Wedge End -->
-                            <a href="#offcanvas-cart" class="header-action-btn header-action-btn-cart offcanvas-toggle pr-0">
+                            <a href="#offcanvas-cart"
+                                class="header-action-btn header-action-btn-cart offcanvas-toggle pr-0">
                                 <i class="pe-7s-shopbag"></i>
                                 <span class="header-action-num">01</span>
                                 <!-- <span class="cart-amount">€30.00</span> -->
                             </a>
-                            <a href="#offcanvas-mobile-menu" class="header-action-btn header-action-btn-menu offcanvas-toggle d-lg-none">
+                            <a href="#offcanvas-mobile-menu"
+                                class="header-action-btn header-action-btn-menu offcanvas-toggle d-lg-none">
                                 <i class="pe-7s-menu"></i>
                             </a>
                         </div>
@@ -87,12 +97,14 @@
                                 <i class="pe-7s-like"></i>
                             </a>
                             <!-- Single Wedge End -->
-                            <a href="#offcanvas-cart" class="header-action-btn header-action-btn-cart offcanvas-toggle pr-0">
+                            <a href="#offcanvas-cart"
+                                class="header-action-btn header-action-btn-cart offcanvas-toggle pr-0">
                                 <i class="pe-7s-shopbag"></i>
                                 <span class="header-action-num">01</span>
                                 <!-- <span class="cart-amount">€30.00</span> -->
                             </a>
-                            <a href="#offcanvas-mobile-menu" class="header-action-btn header-action-btn-menu offcanvas-toggle d-lg-none">
+                            <a href="#offcanvas-mobile-menu"
+                                class="header-action-btn header-action-btn-menu offcanvas-toggle d-lg-none">
                                 <i class="pe-7s-menu"></i>
                             </a>
                         </div>
@@ -114,7 +126,8 @@
                                 </ul>
                             </li>
                             <li><a href="{{route('about')}}">About</a></li>
-                            <li class="dropdown position-static"><a href="{{route('about')}}">Pages <i class="fa fa-angle-down"></i></a>
+                            <li class="dropdown position-static"><a href="{{route('about')}}">Pages <i
+                                        class="fa fa-angle-down"></i></a>
                                 <ul class="mega-menu d-block">
                                     <li class="d-flex">
                                         <ul class="d-block">
@@ -138,9 +151,12 @@
                                             <li><a href="empty-{{route('cart')}}">Empty Cart Page</a></li>
                                             <li><a href="{{route('thank-you-page')}}">Thank You Page</a></li>
                                         </ul>
-                                        <ul class="d-flex align-items-center p-0 border-0 flex-column justify-content-center">
+                                        <ul
+                                            class="d-flex align-items-center p-0 border-0 flex-column justify-content-center">
                                             <li>
-                                                <a class="p-0" href="shop-left-sidebar.html"><img class="img-responsive w-100" src="assets/images/banner/menu-banner.png" alt=""></a>
+                                                <a class="p-0" href="shop-left-sidebar.html"><img
+                                                        class="img-responsive w-100"
+                                                        src="assets/images/banner/menu-banner.png" alt=""></a>
                                             </li>
                                         </ul>
                                     </li>
@@ -173,7 +189,8 @@
                                             <li class="title"><a href="#">Single Product Page</a></li>
                                             <li><a href="single-product-slider.html">Product Slider</a></li>
                                             <li><a href="single-product-gallery-left.html">Product Gallery Left</a>
-                                            <li><a href="single-product-gallery-right.html">Product Gallery Right</a> </li>
+                                            <li><a href="single-product-gallery-right.html">Product Gallery Right</a>
+                                            </li>
                                             <li><a href="single-product-sticky-left.html">Product Sticky Left</a>
                                             </li>
                                             <li><a href="single-product-sticky-right.html">Product Sticky Right</a>
@@ -255,7 +272,8 @@
             <div class="body customScroll">
                 <ul class="minicart-product-list">
                     <li>
-                        <a href="single-product.html" class="image"><img src="assets/images/product-image/1.webp" alt="Cart product Image"></a>
+                        <a href="single-product.html" class="image"><img src="assets/images/product-image/1.webp"
+                                alt="Cart product Image"></a>
                         <div class="content">
                             <a href="single-product.html" class="title">Modern Smart Phone</a>
                             <span class="quantity-price">1 x <span class="amount">$21.86</span></span>
@@ -263,7 +281,8 @@
                         </div>
                     </li>
                     <li>
-                        <a href="single-product.html" class="image"><img src="assets/images/product-image/2.webp" alt="Cart product Image"></a>
+                        <a href="single-product.html" class="image"><img src="assets/images/product-image/2.webp"
+                                alt="Cart product Image"></a>
                         <div class="content">
                             <a href="single-product.html" class="title">Bluetooth Headphone</a>
                             <span class="quantity-price">1 x <span class="amount">$13.28</span></span>
@@ -271,7 +290,8 @@
                         </div>
                     </li>
                     <li>
-                        <a href="single-product.html" class="image"><img src="assets/images/product-image/3.webp" alt="Cart product Image"></a>
+                        <a href="single-product.html" class="image"><img src="assets/images/product-image/3.webp"
+                                alt="Cart product Image"></a>
                         <div class="content">
                             <a href="single-product.html" class="title">Smart Music Box</a>
                             <span class="quantity-price">1 x <span class="amount">$17.34</span></span>
@@ -298,7 +318,8 @@
             <div class="body customScroll">
                 <ul class="minicart-product-list">
                     <li>
-                        <a href="single-product.html" class="image"><img src="assets/images/product-image/1.webp" alt="Cart product Image"></a>
+                        <a href="single-product.html" class="image"><img src="assets/images/product-image/1.webp"
+                                alt="Cart product Image"></a>
                         <div class="content">
                             <a href="single-product.html" class="title">Modern Smart Phone</a>
                             <span class="quantity-price">1 x <span class="amount">$18.86</span></span>
@@ -306,7 +327,8 @@
                         </div>
                     </li>
                     <li>
-                        <a href="single-product.html" class="image"><img src="assets/images/product-image/2.webp" alt="Cart product Image"></a>
+                        <a href="single-product.html" class="image"><img src="assets/images/product-image/2.webp"
+                                alt="Cart product Image"></a>
                         <div class="content">
                             <a href="single-product.html" class="title">Bluetooth Headphone</a>
                             <span class="quantity-price">1 x <span class="amount">$43.28</span></span>
@@ -314,7 +336,8 @@
                         </div>
                     </li>
                     <li>
-                        <a href="single-product.html" class="image"><img src="assets/images/product-image/3.webp" alt="Cart product Image"></a>
+                        <a href="single-product.html" class="image"><img src="assets/images/product-image/3.webp"
+                                alt="Cart product Image"></a>
                         <div class="content">
                             <a href="single-product.html" class="title">Smart Music Box</a>
                             <span class="quantity-price">1 x <span class="amount">$37.34</span></span>
@@ -471,9 +494,9 @@
         </div>
     </div>
     <!-- OffCanvas Menu End -->
-    
+
     @yield('content')
-    
+
     <!-- Footer Area Start -->
     <div class="footer-area">
         <div class="footer-container">
@@ -484,24 +507,30 @@
                         <div class="col-md-6 col-lg-3 mb-md-30px mb-lm-30px">
                             <div class="single-wedge">
                                 <div class="footer-logo">
-                                    <a href="{{route('index')}}"><img src="assets/images/logo/footer-logo.png" alt=""></a>
+                                    <a href="{{route('index')}}"><img src="assets/images/logo/footer-logo.png"
+                                            alt=""></a>
                                 </div>
-                                <p class="about-text">Lorem ipsum dolor sit amet consl adipisi elit, sed do eiusmod templ incididunt ut labore
+                                <p class="about-text">Lorem ipsum dolor sit amet consl adipisi elit, sed do eiusmod
+                                    templ incididunt ut labore
                                 </p>
                                 <ul class="link-follow">
                                     <li>
-                                        <a class="m-0" title="Twitter" target="_blank" rel="noopener noreferrer" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                        <a class="m-0" title="Twitter" target="_blank" rel="noopener noreferrer"
+                                            href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                                     </li>
                                     <li>
-                                        <a title="Tumblr" target="_blank" rel="noopener noreferrer" href="#"><i class="fa fa-tumblr" aria-hidden="true"></i>
+                                        <a title="Tumblr" target="_blank" rel="noopener noreferrer" href="#"><i
+                                                class="fa fa-tumblr" aria-hidden="true"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a title="Facebook" target="_blank" rel="noopener noreferrer" href="#"><i class="fa fa-twitter" aria-hidden="true"></i>
+                                        <a title="Facebook" target="_blank" rel="noopener noreferrer" href="#"><i
+                                                class="fa fa-twitter" aria-hidden="true"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a title="Instagram" target="_blank" rel="noopener noreferrer" href="#"><i class="fa fa-instagram" aria-hidden="true"></i>
+                                        <a title="Instagram" target="_blank" rel="noopener noreferrer" href="#"><i
+                                                class="fa fa-instagram" aria-hidden="true"></i>
                                         </a>
                                     </li>
                                 </ul>
@@ -515,11 +544,16 @@
                                 <div class="footer-links">
                                     <div class="footer-row">
                                         <ul class="align-items-center">
-                                            <li class="li"><a class="single-link" href="{{route('my-account')}}">My Account</a></li>
-                                            <li class="li"><a class="single-link" href="{{route('contact')}}">Contact</a></li>
-                                            <li class="li"><a class="single-link" href="{{route('cart')}}">Shopping cart</a></li>
-                                            <li class="li"><a class="single-link" href="shop-left-sidebar.html">Shop</a></li>
-                                            <li class="li"><a class="single-link" href="{{route('login')}}">Services Login</a></li>
+                                            <li class="li"><a class="single-link" href="{{route('my-account')}}">My
+                                                    Account</a></li>
+                                            <li class="li"><a class="single-link"
+                                                    href="{{route('contact')}}">Contact</a></li>
+                                            <li class="li"><a class="single-link" href="{{route('cart')}}">Shopping
+                                                    cart</a></li>
+                                            <li class="li"><a class="single-link" href="shop-left-sidebar.html">Shop</a>
+                                            </li>
+                                            <li class="li"><a class="single-link" href="{{route('login')}}">Services
+                                                    Login</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -533,11 +567,16 @@
                                 <div class="footer-links">
                                     <div class="footer-row">
                                         <ul class="align-items-center">
-                                            <li class="li"><a class="single-link" href="{{route('my-account')}}">My Account</a></li>
-                                            <li class="li"><a class="single-link" href="{{route('contact')}}">Contact</a></li>
-                                            <li class="li"><a class="single-link" href="{{route('cart')}}">Shopping cart</a></li>
-                                            <li class="li"><a class="single-link" href="shop-left-sidebar.html">Shop</a></li>
-                                            <li class="li"><a class="single-link" href="{{route('login')}}">Services Login</a></li>
+                                            <li class="li"><a class="single-link" href="{{route('my-account')}}">My
+                                                    Account</a></li>
+                                            <li class="li"><a class="single-link"
+                                                    href="{{route('contact')}}">Contact</a></li>
+                                            <li class="li"><a class="single-link" href="{{route('cart')}}">Shopping
+                                                    cart</a></li>
+                                            <li class="li"><a class="single-link" href="shop-left-sidebar.html">Shop</a>
+                                            </li>
+                                            <li class="li"><a class="single-link" href="{{route('login')}}">Services
+                                                    Login</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -567,10 +606,13 @@
                     <div class="line-shape-top line-height-1">
                         <div class="row flex-md-row-reverse align-items-center">
                             <div class="col-md-6 text-center text-md-end">
-                                <div class="payment-mth"><a href="#"><img class="img img-fluid" src="assets/images/icons/payment.png" alt="payment-image"></a></div>
+                                <div class="payment-mth"><a href="#"><img class="img img-fluid"
+                                            src="assets/images/icons/payment.png" alt="payment-image"></a></div>
                             </div>
                             <div class="col-md-6 text-center text-md-start">
-                                <p class="copy-text"> © 2021 <strong>Hmart</strong> Made With <i class="fa fa-heart" aria-hidden="true"></i> By <a class="company-name" href="https://themeforest.net/user/codecarnival/portfolio">
+                                <p class="copy-text"> © 2021 <strong>Hmart</strong> Made With <i class="fa fa-heart"
+                                        aria-hidden="true"></i> By <a class="company-name"
+                                        href="https://themeforest.net/user/codecarnival/portfolio">
                                         <strong> Codecarnival </strong></a>.</p>
                             </div>
                         </div>

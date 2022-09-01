@@ -1,4 +1,4 @@
-@extends('layout.index')
+@extends('layouts.index')
 
 @section('title', 'Empty Cart page')
 

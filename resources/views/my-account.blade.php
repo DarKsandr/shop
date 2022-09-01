@@ -1,4 +1,4 @@
-@extends('layout.main')
+@extends('layouts.main')
 
 @section('title', 'My Account')
 
@@ -34,7 +34,12 @@
                         <li><a href="#address" data-bs-toggle="tab" class="nav-link">Addresses</a></li>
                         <li><a href="#account-details" data-bs-toggle="tab" class="nav-link">Account details</a>
                         </li>
-                        <li><a href="login.html" class="nav-link">logout</a></li>
+                        <li>
+                            <form action="{{route('logout')}}" method="POST">
+                                @csrf
+                                <button type="submit" class="nav-link w-100 text-start">logout</button>
+                            </form>
+                        </li>
                     </ul>
                 </div>
             </div>
