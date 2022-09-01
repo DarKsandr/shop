@@ -610,10 +610,7 @@
                                             src="assets/images/icons/payment.png" alt="payment-image"></a></div>
                             </div>
                             <div class="col-md-6 text-center text-md-start">
-                                <p class="copy-text"> © 2021 <strong>Hmart</strong> Made With <i class="fa fa-heart"
-                                        aria-hidden="true"></i> By <a class="company-name"
-                                        href="https://themeforest.net/user/codecarnival/portfolio">
-                                        <strong> Codecarnival </strong></a>.</p>
+                                <p class="copy-text"> © 2022 - {{\Carbon\Carbon::now()->format("Y")}} <strong>Hmart</strong>.</p>
                             </div>
                         </div>
                     </div>
