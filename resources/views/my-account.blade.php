@@ -34,6 +34,9 @@
                         <li><a href="#address" data-bs-toggle="tab" class="nav-link">Addresses</a></li>
                         <li><a href="#account-details" data-bs-toggle="tab" class="nav-link">Account details</a>
                         </li>
+                        @if (Auth::user()->hasRole('admin'))
+                        <li><a href="{{route('laratrust.roles-assignment.index')}}" class="nav-link">Laratrust</a></li>
+                        @endif
                         <li>
                             <form action="{{route('logout')}}" method="POST">
                                 @csrf
