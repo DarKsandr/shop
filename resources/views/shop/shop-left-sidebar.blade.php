@@ -75,7 +75,7 @@
                                                     <span class="new">New</span>
                                                 </span>
                                                 <div class="thumb">
-                                                    <a href="single-product.html" class="image">
+                                                    <a href="{{route('product', 1)}}" class="image">
                                                         <img src="/assets/images/product-image/1.webp" alt="Product" />
                                                         <img class="hover-image"
                                                             src="/assets/images/product-image/1.webp" alt="Product" />
@@ -83,7 +83,7 @@
                                                 </div>
                                                 <div class="content">
                                                     <span class="category"><a href="#">Accessories</a></span>
-                                                    <h5 class="title"><a href="single-product.html">Modern Smart Phone
+                                                    <h5 class="title"><a href="{{route('product', 1)}}">Modern Smart Phone
                                                         </a>
                                                     </h5>
                                                     <span class="price">
@@ -116,7 +116,7 @@
                                                     <span class="new">New</span>
                                                 </span>
                                                 <div class="thumb">
-                                                    <a href="single-product.html" class="image">
+                                                    <a href="{{route('product', 1)}}" class="image">
                                                         <img src="/assets/images/product-image/2.webp"
                                                             alt="Product" />
                                                         <img class="hover-image"
@@ -125,7 +125,7 @@
                                                 </div>
                                                 <div class="content">
                                                     <span class="category"><a href="#">Accessories</a></span>
-                                                    <h5 class="title"><a href="single-product.html">Bluetooth
+                                                    <h5 class="title"><a href="{{route('product', 1)}}">Bluetooth
                                                             Headphone
                                                         </a>
                                                     </h5>
@@ -160,7 +160,7 @@
                                                     <span class="new">Sale</span>
                                                 </span>
                                                 <div class="thumb">
-                                                    <a href="single-product.html" class="image">
+                                                    <a href="{{route('product', 1)}}" class="image">
                                                         <img src="/assets/images/product-image/3.webp"
                                                             alt="Product" />
                                                         <img class="hover-image"
@@ -169,7 +169,7 @@
                                                 </div>
                                                 <div class="content">
                                                     <span class="category"><a href="#">Accessories</a></span>
-                                                    <h5 class="title"><a href="single-product.html">Smart Music Box
+                                                    <h5 class="title"><a href="{{route('product', 1)}}">Smart Music Box
                                                         </a>
                                                     </h5>
                                                     <span class="price">
@@ -202,7 +202,7 @@
                                                     <span class="new">New</span>
                                                 </span>
                                                 <div class="thumb">
-                                                    <a href="single-product.html" class="image">
+                                                    <a href="{{route('product', 1)}}" class="image">
                                                         <img src="/assets/images/product-image/4.webp"
                                                             alt="Product" />
                                                         <img class="hover-image"
@@ -211,7 +211,7 @@
                                                 </div>
                                                 <div class="content">
                                                     <span class="category"><a href="#">Accessories</a></span>
-                                                    <h5 class="title"><a href="single-product.html">Air Pods 25Hjkl
+                                                    <h5 class="title"><a href="{{route('product', 1)}}">Air Pods 25Hjkl
                                                             Black
                                                         </a>
                                                     </h5>
@@ -244,7 +244,7 @@
                                                 <span class="badges">
                                                 </span>
                                                 <div class="thumb">
-                                                    <a href="single-product.html" class="image">
+                                                    <a href="{{route('product', 1)}}" class="image">
                                                         <img src="/assets/images/product-image/5.webp"
                                                             alt="Product" />
                                                         <img class="hover-image"
@@ -253,7 +253,7 @@
                                                 </div>
                                                 <div class="content">
                                                     <span class="category"><a href="#">Accessories</a></span>
-                                                    <h5 class="title"><a href="single-product.html">Smart Hand Watch
+                                                    <h5 class="title"><a href="{{route('product', 1)}}">Smart Hand Watch
                                                         </a>
                                                     </h5>
                                                     <span class="price">
@@ -287,7 +287,7 @@
                                                     <span class="new">Sale</span>
                                                 </span>
                                                 <div class="thumb">
-                                                    <a href="single-product.html" class="image">
+                                                    <a href="{{route('product', 1)}}" class="image">
                                                         <img src="/assets/images/product-image/6.webp"
                                                             alt="Product" />
                                                         <img class="hover-image"
@@ -296,7 +296,7 @@
                                                 </div>
                                                 <div class="content">
                                                     <span class="category"><a href="#">Accessories</a></span>
-                                                    <h5 class="title"><a href="single-product.html">Smart Table
+                                                    <h5 class="title"><a href="{{route('product', 1)}}">Smart Table
                                                             Camera
                                                         </a>
                                                     </h5>
@@ -331,7 +331,7 @@
                                                     <span class="new">Sale</span>
                                                 </span>
                                                 <div class="thumb">
-                                                    <a href="single-product.html" class="image">
+                                                    <a href="{{route('product', 1)}}" class="image">
                                                         <img src="/assets/images/product-image/7.webp"
                                                             alt="Product" />
                                                         <img class="hover-image"
@@ -340,7 +340,7 @@
                                                 </div>
                                                 <div class="content">
                                                     <span class="category"><a href="#">Accessories</a></span>
-                                                    <h5 class="title"><a href="single-product.html">Round Pocket
+                                                    <h5 class="title"><a href="{{route('product', 1)}}">Round Pocket
                                                             Router
                                                         </a>
                                                     </h5>
@@ -374,7 +374,7 @@
                                                     <span class="sale">-5%</span>
                                                 </span>
                                                 <div class="thumb">
-                                                    <a href="single-product.html" class="image">
+                                                    <a href="{{route('product', 1)}}" class="image">
                                                         <img src="/assets/images/product-image/8.webp"
                                                             alt="Product" />
                                                         <img class="hover-image"
@@ -383,7 +383,7 @@
                                                 </div>
                                                 <div class="content">
                                                     <span class="category"><a href="#">Accessories</a></span>
-                                                    <h5 class="title"><a href="single-product.html">Power Bank
+                                                    <h5 class="title"><a href="{{route('product', 1)}}">Power Bank
                                                             10000Mhp
                                                         </a>
                                                     </h5>
@@ -418,7 +418,7 @@
                                                     <span class="new">New</span>
                                                 </span>
                                                 <div class="thumb">
-                                                    <a href="single-product.html" class="image">
+                                                    <a href="{{route('product', 1)}}" class="image">
                                                         <img src="/assets/images/product-image/1.webp"
                                                             alt="Product" />
                                                         <img class="hover-image"
@@ -427,7 +427,7 @@
                                                 </div>
                                                 <div class="content">
                                                     <span class="category"><a href="#">Accessories</a></span>
-                                                    <h5 class="title"><a href="single-product.html">Modern Smart
+                                                    <h5 class="title"><a href="{{route('product', 1)}}">Modern Smart
                                                             Phone
                                                         </a>
                                                     </h5>
@@ -461,7 +461,7 @@
                                                     <span class="new">New</span>
                                                 </span>
                                                 <div class="thumb">
-                                                    <a href="single-product.html" class="image">
+                                                    <a href="{{route('product', 1)}}" class="image">
                                                         <img src="/assets/images/product-image/2.webp"
                                                             alt="Product" />
                                                         <img class="hover-image"
@@ -470,7 +470,7 @@
                                                 </div>
                                                 <div class="content">
                                                     <span class="category"><a href="#">Accessories</a></span>
-                                                    <h5 class="title"><a href="single-product.html">Modern Smart
+                                                    <h5 class="title"><a href="{{route('product', 1)}}">Modern Smart
                                                             Phone
                                                         </a>
                                                     </h5>
@@ -504,7 +504,7 @@
                                                     <span class="sale">-8%</span>
                                                 </span>
                                                 <div class="thumb">
-                                                    <a href="single-product.html" class="image">
+                                                    <a href="{{route('product', 1)}}" class="image">
                                                         <img src="/assets/images/product-image/4.webp"
                                                             alt="Product" />
                                                         <img class="hover-image"
@@ -513,7 +513,7 @@
                                                 </div>
                                                 <div class="content">
                                                     <span class="category"><a href="#">Accessories</a></span>
-                                                    <h5 class="title"><a href="single-product.html">Modern Smart
+                                                    <h5 class="title"><a href="{{route('product', 1)}}">Modern Smart
                                                             Phone
                                                         </a>
                                                     </h5>
@@ -548,7 +548,7 @@
                                                     <span class="new">Sale</span>
                                                 </span>
                                                 <div class="thumb">
-                                                    <a href="single-product.html" class="image">
+                                                    <a href="{{route('product', 1)}}" class="image">
                                                         <img src="/assets/images/product-image/3.webp"
                                                             alt="Product" />
                                                         <img class="hover-image"
@@ -557,7 +557,7 @@
                                                 </div>
                                                 <div class="content">
                                                     <span class="category"><a href="#">Accessories</a></span>
-                                                    <h5 class="title"><a href="single-product.html">Modern Smart
+                                                    <h5 class="title"><a href="{{route('product', 1)}}">Modern Smart
                                                             Phone
                                                         </a>
                                                     </h5>
@@ -592,7 +592,7 @@
                                             <div class="col-md-5 col-lg-5 col-xl-4 mb-lm-30px">
                                                 <div class="product">
                                                     <div class="thumb">
-                                                        <a href="single-product.html" class="image">
+                                                        <a href="{{route('product', 1)}}" class="image">
                                                             <img src="/assets/images/product-image/1.webp"
                                                                 alt="Product" />
                                                             <img class="hover-image"
@@ -610,7 +610,7 @@
                                                     <div class="content">
                                                         <span class="category"><a
                                                                 href="#">Accessories</a></span>
-                                                        <h5 class="title"><a href="single-product.html">Modern Smart
+                                                        <h5 class="title"><a href="{{route('product', 1)}}">Modern Smart
                                                                 Phone</a></h5>
                                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                                                             sed do eiusmodol tempor incididunt ut labore et dolore
@@ -650,7 +650,7 @@
                                             <div class="col-md-5 col-lg-5 col-xl-4 mb-lm-30px">
                                                 <div class="product">
                                                     <div class="thumb">
-                                                        <a href="single-product.html" class="image">
+                                                        <a href="{{route('product', 1)}}" class="image">
                                                             <img src="/assets/images/product-image/2.webp"
                                                                 alt="Product" />
                                                             <img class="hover-image"
@@ -669,7 +669,7 @@
                                                     <div class="content">
                                                         <span class="category"><a
                                                                 href="#">Accessories</a></span>
-                                                        <h5 class="title"><a href="single-product.html">Bluetooth
+                                                        <h5 class="title"><a href="{{route('product', 1)}}">Bluetooth
                                                                 Headphone </a></h5>
                                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                                                             sed do eiusmodol tempor incididunt ut labore et dolore
@@ -710,7 +710,7 @@
                                             <div class="col-md-5 col-lg-5 col-xl-4 mb-lm-30px">
                                                 <div class="product">
                                                     <div class="thumb">
-                                                        <a href="single-product.html" class="image">
+                                                        <a href="{{route('product', 1)}}" class="image">
                                                             <img src="/assets/images/product-image/3.webp"
                                                                 alt="Product" />
                                                             <img class="hover-image"
@@ -728,7 +728,7 @@
                                                     <div class="content">
                                                         <span class="category"><a
                                                                 href="#">Accessories</a></span>
-                                                        <h5 class="title"><a href="single-product.html">Smart Music
+                                                        <h5 class="title"><a href="{{route('product', 1)}}">Smart Music
                                                                 Box</a></h5>
                                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                                                             sed do eiusmodol tempor incididunt ut labore et dolore
@@ -768,7 +768,7 @@
                                             <div class="col-md-5 col-lg-5 col-xl-4 mb-lm-30px">
                                                 <div class="product">
                                                     <div class="thumb">
-                                                        <a href="single-product.html" class="image">
+                                                        <a href="{{route('product', 1)}}" class="image">
                                                             <img src="/assets/images/product-image/4.webp"
                                                                 alt="Product" />
                                                             <img class="hover-image"
@@ -786,7 +786,7 @@
                                                     <div class="content">
                                                         <span class="category"><a
                                                                 href="#">Accessories</a></span>
-                                                        <h5 class="title"><a href="single-product.html">Air Pods
+                                                        <h5 class="title"><a href="{{route('product', 1)}}">Air Pods
                                                                 25Hjkl Black</a></h5>
                                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                                                             sed do eiusmodol tempor incididunt ut labore et dolore
@@ -826,7 +826,7 @@
                                             <div class="col-md-5 col-lg-5 col-xl-4 mb-lm-30px">
                                                 <div class="product">
                                                     <div class="thumb">
-                                                        <a href="single-product.html" class="image">
+                                                        <a href="{{route('product', 1)}}" class="image">
                                                             <img src="/assets/images/product-image/5.webp"
                                                                 alt="Product" />
                                                             <img class="hover-image"
@@ -843,7 +843,7 @@
                                                     <div class="content">
                                                         <span class="category"><a
                                                                 href="#">Accessories</a></span>
-                                                        <h5 class="title"><a href="single-product.html">Smart Hand
+                                                        <h5 class="title"><a href="{{route('product', 1)}}">Smart Hand
                                                                 Watch</a></h5>
                                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                                                             sed do eiusmodol tempor incididunt ut labore et dolore
@@ -883,7 +883,7 @@
                                             <div class="col-md-5 col-lg-5 col-xl-4 mb-lm-30px">
                                                 <div class="product">
                                                     <div class="thumb">
-                                                        <a href="single-product.html" class="image">
+                                                        <a href="{{route('product', 1)}}" class="image">
                                                             <img src="/assets/images/product-image/7.webp"
                                                                 alt="Product" />
                                                             <img class="hover-image"
@@ -901,7 +901,7 @@
                                                     <div class="content">
                                                         <span class="category"><a
                                                                 href="#">Accessories</a></span>
-                                                        <h5 class="title"><a href="single-product.html">Smart Table
+                                                        <h5 class="title"><a href="{{route('product', 1)}}">Smart Table
                                                                 Camera</a></h5>
                                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                                                             sed do eiusmodol tempor incididunt ut labore et dolore
@@ -942,7 +942,7 @@
                                             <div class="col-md-5 col-lg-5 col-xl-4 mb-lm-30px">
                                                 <div class="product">
                                                     <div class="thumb">
-                                                        <a href="single-product.html" class="image">
+                                                        <a href="{{route('product', 1)}}" class="image">
                                                             <img src="/assets/images/product-image/8.webp"
                                                                 alt="Product" />
                                                             <img class="hover-image"
@@ -959,7 +959,7 @@
                                                     <div class="content">
                                                         <span class="category"><a
                                                                 href="#">Accessories</a></span>
-                                                        <h5 class="title"><a href="single-product.html">Round Pocket
+                                                        <h5 class="title"><a href="{{route('product', 1)}}">Round Pocket
                                                                 Router</a></h5>
                                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                                                             sed do eiusmodol tempor incididunt ut labore et dolore
@@ -999,7 +999,7 @@
                                             <div class="col-md-5 col-lg-5 col-xl-4 mb-lm-30px">
                                                 <div class="product">
                                                     <div class="thumb">
-                                                        <a href="single-product.html" class="image">
+                                                        <a href="{{route('product', 1)}}" class="image">
                                                             <img src="/assets/images/product-image/1.webp"
                                                                 alt="Product" />
                                                             <img class="hover-image"
@@ -1017,7 +1017,7 @@
                                                     <div class="content">
                                                         <span class="category"><a
                                                                 href="#">Accessories</a></span>
-                                                        <h5 class="title"><a href="single-product.html">Power Bank
+                                                        <h5 class="title"><a href="{{route('product', 1)}}">Power Bank
                                                                 10000Mhp</a></h5>
                                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                                                             sed do eiusmodol tempor incididunt ut labore et dolore
@@ -1058,7 +1058,7 @@
                                             <div class="col-md-5 col-lg-5 col-xl-4 mb-lm-30px">
                                                 <div class="product">
                                                     <div class="thumb">
-                                                        <a href="single-product.html" class="image">
+                                                        <a href="{{route('product', 1)}}" class="image">
                                                             <img src="/assets/images/product-image/2.webp"
                                                                 alt="Product" />
                                                             <img class="hover-image"
@@ -1075,7 +1075,7 @@
                                                     <div class="content">
                                                         <span class="category"><a
                                                                 href="#">Accessories</a></span>
-                                                        <h5 class="title"><a href="single-product.html">Power Bank
+                                                        <h5 class="title"><a href="{{route('product', 1)}}">Power Bank
                                                                 10000Mhp</a></h5>
                                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                                                             sed do eiusmodol tempor incididunt ut labore et dolore
@@ -1116,7 +1116,7 @@
                                             <div class="col-md-5 col-lg-5 col-xl-4 mb-lm-30px">
                                                 <div class="product">
                                                     <div class="thumb">
-                                                        <a href="single-product.html" class="image">
+                                                        <a href="{{route('product', 1)}}" class="image">
                                                             <img src="/assets/images/product-image/3.webp"
                                                                 alt="Product" />
                                                             <img class="hover-image"
@@ -1134,7 +1134,7 @@
                                                     <div class="content">
                                                         <span class="category"><a
                                                                 href="#">Accessories</a></span>
-                                                        <h5 class="title"><a href="single-product.html">Modern Smart
+                                                        <h5 class="title"><a href="{{route('product', 1)}}">Modern Smart
                                                                 Phone</a></h5>
                                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                                                             sed do eiusmodol tempor incididunt ut labore et dolore
@@ -1174,7 +1174,7 @@
                                             <div class="col-md-5 col-lg-5 col-xl-4 mb-lm-30px">
                                                 <div class="product">
                                                     <div class="thumb">
-                                                        <a href="single-product.html" class="image">
+                                                        <a href="{{route('product', 1)}}" class="image">
                                                             <img src="/assets/images/product-image/4.webp"
                                                                 alt="Product" />
                                                             <img class="hover-image"
@@ -1192,7 +1192,7 @@
                                                     <div class="content">
                                                         <span class="category"><a
                                                                 href="#">Accessories</a></span>
-                                                        <h5 class="title"><a href="single-product.html">Bluetooth
+                                                        <h5 class="title"><a href="{{route('product', 1)}}">Bluetooth
                                                                 Headphone </a></h5>
                                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                                                             sed do eiusmodol tempor incididunt ut labore et dolore
@@ -1232,7 +1232,7 @@
                                             <div class="col-md-5 col-lg-5 col-xl-4 mb-lm-30px">
                                                 <div class="product">
                                                     <div class="thumb">
-                                                        <a href="single-product.html" class="image">
+                                                        <a href="{{route('product', 1)}}" class="image">
                                                             <img src="/assets/images/product-image/6.webp"
                                                                 alt="Product" />
                                                             <img class="hover-image"
@@ -1251,7 +1251,7 @@
                                                     <div class="content">
                                                         <span class="category"><a
                                                                 href="#">Accessories</a></span>
-                                                        <h5 class="title"><a href="single-product.html">Smart Music
+                                                        <h5 class="title"><a href="{{route('product', 1)}}">Smart Music
                                                                 Box</a></h5>
                                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                                                             sed do eiusmodol tempor incididunt ut labore et dolore
@@ -1409,4 +1409,8 @@
     </div>
 </div>
 <!-- Shop Page End  -->
+@endsection
+
+@section('modal')
+    @include('product.modal')
 @endsection

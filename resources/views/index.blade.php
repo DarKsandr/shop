@@ -686,3 +686,7 @@
 </div>
 <!-- Blog area end here -->
 @endsection
+
+@section('modal')
+    @include('product.modal')
+@endsection
