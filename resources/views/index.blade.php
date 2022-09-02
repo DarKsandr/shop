@@ -10,7 +10,7 @@
         <div class="swiper-wrapper">
             <!-- Single slider item -->
             <div class="hero-slide-item slider-height-2 swiper-slide bg-color1"
-                data-bg-image="assets/images/hero/bg/hero-bg-2-1.webp">
+                data-bg-image="/assets/images/hero/bg/hero-bg-2-1.webp">
                 <div class="container h-100">
                     <div class="row h-100 flex-row-reverse">
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 align-self-center sm-center-view">
@@ -21,7 +21,7 @@
                                     <span class="mini-title">Only</span>
                                     <span class="amount">$24.00</span>
                                 </span>
-                                <a href="shop-left-sidebar.html" class="btn btn-primary text-capitalize">Shop All
+                                <a href="{{route('shop')}}" class="btn btn-primary text-capitalize">Shop All
                                     Devices</a>
                             </div>
                         </div>
@@ -29,7 +29,7 @@
                             class="col-xl-6 col-lg-6 col-md-6 col-sm-6 d-flex justify-content-center position-relative align-items-center">
                             <div class="show-case">
                                 <div class="hero-slide-image slider-2">
-                                    <img src="assets/images/hero/inner-img/hero-2-1.png" alt="" />
+                                    <img src="/assets/images/hero/inner-img/hero-2-1.png" alt="" />
                                 </div>
                             </div>
                         </div>
@@ -38,7 +38,7 @@
             </div>
             <!-- Single slider item -->
             <div class="hero-slide-item slider-height-2 swiper-slide bg-color1"
-                data-bg-image="assets/images/hero/bg/hero-bg-2-1.webp">
+                data-bg-image="/assets/images/hero/bg/hero-bg-2-1.webp">
                 <div class="container h-100">
                     <div class="row h-100 flex-row-reverse">
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 align-self-center sm-center-view">
@@ -49,7 +49,7 @@
                                     <span class="mini-title">Only</span>
                                     <span class="amount">$24.00</span>
                                 </span>
-                                <a href="shop-left-sidebar.html" class="btn btn-primary text-capitalize">Shop All
+                                <a href="{{route('shop')}}" class="btn btn-primary text-capitalize">Shop All
                                     Devices</a>
                             </div>
                         </div>
@@ -57,7 +57,7 @@
                             class="col-xl-6 col-lg-6 col-md-6 col-sm-6 d-flex justify-content-center position-relative align-items-center">
                             <div class="show-case">
                                 <div class="hero-slide-image slider-2">
-                                    <img src="assets/images/hero/inner-img/hero-2-1.png" alt="" />
+                                    <img src="/assets/images/hero/inner-img/hero-2-1.png" alt="" />
                                 </div>
                             </div>
                         </div>
@@ -81,22 +81,22 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="single-banner nth-child-2 mb-lm-30px">
-                    <img src="assets/images/banner/6.webp" alt="">
+                    <img src="/assets/images/banner/6.webp" alt="">
                     <div class="banner-content nth-child-3">
                         <h3 class="title">Speaker</h3>
                         <span class="category">From $69.00</span>
-                        <a href="shop-left-sidebar.html" class="shop-link">Shop Now <i class="fa fa-arrow-right"
+                        <a href="{{route('shop')}}" class="shop-link">Shop Now <i class="fa fa-arrow-right"
                                 aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="single-banner nth-child-2">
-                    <img src="assets/images/banner/7.webp" alt="">
+                    <img src="/assets/images/banner/7.webp" alt="">
                     <div class="banner-content nth-child-2">
                         <h3 class="title">Smartphone</h3>
                         <span class="category">From $95.00</span>
-                        <a href="shop-left-sidebar.html" class="shop-link">Shop Now <i class="fa fa-arrow-right"
+                        <a href="{{route('shop')}}" class="shop-link">Shop Now <i class="fa fa-arrow-right"
                                 aria-hidden="true"></i></a>
                     </div>
                 </div>
@@ -128,14 +128,14 @@
                                 <span class="new">New</span>
                             </span>
                             <div class="thumb">
-                                <a href="single-product.html" class="image">
-                                    <img src="assets/images/product-image/1.webp" alt="Product" />
-                                    <img class="hover-image" src="assets/images/product-image/1.webp" alt="Product" />
+                                <a href="{{route('product', 1)}}" class="image">
+                                    <img src="/assets/images/product-image/1.webp" alt="Product" />
+                                    <img class="hover-image" src="/assets/images/product-image/1.webp" alt="Product" />
                                 </a>
                             </div>
                             <div class="content">
                                 <span class="category"><a href="#">Accessories</a></span>
-                                <h5 class="title"><a href="single-product.html">Modern Smart Phone
+                                <h5 class="title"><a href="{{route('product', 1)}}">Modern Smart Phone
                                     </a>
                                 </h5>
                                 <span class="price">
@@ -163,14 +163,14 @@
                                 <span class="new">New</span>
                             </span>
                             <div class="thumb">
-                                <a href="single-product.html" class="image">
-                                    <img src="assets/images/product-image/2.webp" alt="Product" />
-                                    <img class="hover-image" src="assets/images/product-image/2.webp" alt="Product" />
+                                <a href="{{route('product', 1)}}" class="image">
+                                    <img src="/assets/images/product-image/2.webp" alt="Product" />
+                                    <img class="hover-image" src="/assets/images/product-image/2.webp" alt="Product" />
                                 </a>
                             </div>
                             <div class="content">
                                 <span class="category"><a href="#">Accessories</a></span>
-                                <h5 class="title"><a href="single-product.html">Bluetooth Headphone
+                                <h5 class="title"><a href="{{route('product', 1)}}">Bluetooth Headphone
                                     </a>
                                 </h5>
                                 <span class="price">
@@ -198,14 +198,14 @@
                                 <span class="new">Sale</span>
                             </span>
                             <div class="thumb">
-                                <a href="single-product.html" class="image">
-                                    <img src="assets/images/product-image/3.webp" alt="Product" />
-                                    <img class="hover-image" src="assets/images/product-image/3.webp" alt="Product" />
+                                <a href="{{route('product', 1)}}" class="image">
+                                    <img src="/assets/images/product-image/3.webp" alt="Product" />
+                                    <img class="hover-image" src="/assets/images/product-image/3.webp" alt="Product" />
                                 </a>
                             </div>
                             <div class="content">
                                 <span class="category"><a href="#">Accessories</a></span>
-                                <h5 class="title"><a href="single-product.html">Smart Music Box
+                                <h5 class="title"><a href="{{route('product', 1)}}">Smart Music Box
                                     </a>
                                 </h5>
                                 <span class="price">
@@ -232,14 +232,14 @@
                                 <span class="new">New</span>
                             </span>
                             <div class="thumb">
-                                <a href="single-product.html" class="image">
-                                    <img src="assets/images/product-image/4.webp" alt="Product" />
-                                    <img class="hover-image" src="assets/images/product-image/1.webp" alt="Product" />
+                                <a href="{{route('product', 1)}}" class="image">
+                                    <img src="/assets/images/product-image/4.webp" alt="Product" />
+                                    <img class="hover-image" src="/assets/images/product-image/1.webp" alt="Product" />
                                 </a>
                             </div>
                             <div class="content">
                                 <span class="category"><a href="#">Accessories</a></span>
-                                <h5 class="title"><a href="single-product.html">Air Pods 25Hjkl Black
+                                <h5 class="title"><a href="{{route('product', 1)}}">Air Pods 25Hjkl Black
                                     </a>
                                 </h5>
                                 <span class="price">
@@ -265,14 +265,14 @@
                             <span class="badges">
                             </span>
                             <div class="thumb">
-                                <a href="single-product.html" class="image">
-                                    <img src="assets/images/product-image/5.webp" alt="Product" />
-                                    <img class="hover-image" src="assets/images/product-image/5.webp" alt="Product" />
+                                <a href="{{route('product', 1)}}" class="image">
+                                    <img src="/assets/images/product-image/5.webp" alt="Product" />
+                                    <img class="hover-image" src="/assets/images/product-image/5.webp" alt="Product" />
                                 </a>
                             </div>
                             <div class="content">
                                 <span class="category"><a href="#">Accessories</a></span>
-                                <h5 class="title"><a href="single-product.html">Smart Hand Watch
+                                <h5 class="title"><a href="{{route('product', 1)}}">Smart Hand Watch
                                     </a>
                                 </h5>
                                 <span class="price">
@@ -300,14 +300,14 @@
                                 <span class="new">Sale</span>
                             </span>
                             <div class="thumb">
-                                <a href="single-product.html" class="image">
-                                    <img src="assets/images/product-image/6.webp" alt="Product" />
-                                    <img class="hover-image" src="assets/images/product-image/6.webp" alt="Product" />
+                                <a href="{{route('product', 1)}}" class="image">
+                                    <img src="/assets/images/product-image/6.webp" alt="Product" />
+                                    <img class="hover-image" src="/assets/images/product-image/6.webp" alt="Product" />
                                 </a>
                             </div>
                             <div class="content">
                                 <span class="category"><a href="#">Accessories</a></span>
-                                <h5 class="title"><a href="single-product.html">Smart Table Camera
+                                <h5 class="title"><a href="{{route('product', 1)}}">Smart Table Camera
                                     </a>
                                 </h5>
                                 <span class="price">
@@ -335,14 +335,14 @@
                                 <span class="new">Sale</span>
                             </span>
                             <div class="thumb">
-                                <a href="single-product.html" class="image">
-                                    <img src="assets/images/product-image/7.webp" alt="Product" />
-                                    <img class="hover-image" src="assets/images/product-image/1.webp" alt="Product" />
+                                <a href="{{route('product', 1)}}" class="image">
+                                    <img src="/assets/images/product-image/7.webp" alt="Product" />
+                                    <img class="hover-image" src="/assets/images/product-image/1.webp" alt="Product" />
                                 </a>
                             </div>
                             <div class="content">
                                 <span class="category"><a href="#">Accessories</a></span>
-                                <h5 class="title"><a href="single-product.html">Round Pocket Router
+                                <h5 class="title"><a href="{{route('product', 1)}}">Round Pocket Router
                                     </a>
                                 </h5>
                                 <span class="price">
@@ -369,14 +369,14 @@
                                 <span class="sale">-5%</span>
                             </span>
                             <div class="thumb">
-                                <a href="single-product.html" class="image">
-                                    <img src="assets/images/product-image/8.webp" alt="Product" />
-                                    <img class="hover-image" src="assets/images/product-image/8.webp" alt="Product" />
+                                <a href="{{route('product', 1)}}" class="image">
+                                    <img src="/assets/images/product-image/8.webp" alt="Product" />
+                                    <img class="hover-image" src="/assets/images/product-image/8.webp" alt="Product" />
                                 </a>
                             </div>
                             <div class="content">
                                 <span class="category"><a href="#">Accessories</a></span>
-                                <h5 class="title"><a href="single-product.html">Power Bank 10000Mhp
+                                <h5 class="title"><a href="{{route('product', 1)}}">Power Bank 10000Mhp
                                     </a>
                                 </h5>
                                 <span class="price">
@@ -409,24 +409,24 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="single-banner mb-lm-30px">
-                    <img src="assets/images/banner/8.webp" alt="">
+                    <img src="/assets/images/banner/8.webp" alt="">
                     <div class="banner-content nth-child-3">
                         <h3 class="title">Smart Watch For <br>
                             Your Hand</h3>
                         <span class="category">From $69.00</span>
-                        <a href="shop-left-sidebar.html" class="shop-link">Shop Now <i class="fa fa-arrow-right"
+                        <a href="{{route('shop')}}" class="shop-link">Shop Now <i class="fa fa-arrow-right"
                                 aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="single-banner">
-                    <img src="assets/images/banner/9.webp" alt="">
+                    <img src="/assets/images/banner/9.webp" alt="">
                     <div class="banner-content nth-child-2">
                         <h3 class="title">Smart Watch For <br>
                             Your Hand</h3>
                         <span class="category">From $95.00</span>
-                        <a href="shop-left-sidebar.html" class="shop-link">Shop Now <i class="fa fa-arrow-right"
+                        <a href="{{route('shop')}}" class="shop-link">Shop Now <i class="fa fa-arrow-right"
                                 aria-hidden="true"></i></a>
                     </div>
                 </div>
@@ -450,7 +450,7 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide feature-right-content">
                     <div class="image-side">
-                        <img src="assets/images/feature-image/2.webp" alt="">
+                        <img src="/assets/images/feature-image/2.webp" alt="">
                         <button title="Add To Cart" class="action add-to-cart" data-bs-toggle="modal"
                             data-bs-target="#exampleModal-Cart"><i class="pe-7s-shopbag"></i></button>
                     </div>
@@ -460,7 +460,7 @@
                             <div data-countdown="2021/09/15"></div>
                         </div>
                         <div class="prize-content">
-                            <h5 class="title"><a href="single-product.html">Ladies Smart Watch</a></h5>
+                            <h5 class="title"><a href="{{route('product', 1)}}">Ladies Smart Watch</a></h5>
                             <span class="price">
                                 <span class="old">$48.50</span>
                                 <span class="new">$38.50</span>
@@ -478,7 +478,7 @@
                 </div>
                 <div class="swiper-slide feature-right-content">
                     <div class="image-side">
-                        <img src="assets/images/feature-image/3.webp" alt="">
+                        <img src="/assets/images/feature-image/3.webp" alt="">
                         <button title="Add To Cart" class="action add-to-cart" data-bs-toggle="modal"
                             data-bs-target="#exampleModal-Cart"><i class="pe-7s-shopbag"></i></button>
                     </div>
@@ -488,7 +488,7 @@
                             <div data-countdown="2021/09/15"></div>
                         </div>
                         <div class="prize-content">
-                            <h5 class="title"><a href="single-product.html">Ladies Smart Watch</a></h5>
+                            <h5 class="title"><a href="{{route('product', 1)}}">Ladies Smart Watch</a></h5>
                             <span class="price">
                                 <span class="old">$48.50</span>
                                 <span class="new">$38.50</span>
@@ -506,7 +506,7 @@
                 </div>
                 <div class="swiper-slide feature-right-content">
                     <div class="image-side">
-                        <img src="assets/images/feature-image/2.webp" alt="">
+                        <img src="/assets/images/feature-image/2.webp" alt="">
                         <button title="Add To Cart" class="action add-to-cart" data-bs-toggle="modal"
                             data-bs-target="#exampleModal-Cart"><i class="pe-7s-shopbag"></i></button>
                     </div>
@@ -516,7 +516,7 @@
                             <div data-countdown="2021/09/15"></div>
                         </div>
                         <div class="prize-content">
-                            <h5 class="title"><a href="single-product.html">Ladies Smart Watch</a></h5>
+                            <h5 class="title"><a href="{{route('product', 1)}}">Ladies Smart Watch</a></h5>
                             <span class="price">
                                 <span class="old">$48.50</span>
                                 <span class="new">$38.50</span>
@@ -534,7 +534,7 @@
                 </div>
                 <div class="swiper-slide feature-right-content">
                     <div class="image-side">
-                        <img src="assets/images/feature-image/3.webp" alt="">
+                        <img src="/assets/images/feature-image/3.webp" alt="">
                         <button title="Add To Cart" class="action add-to-cart" data-bs-toggle="modal"
                             data-bs-target="#exampleModal-Cart"><i class="pe-7s-shopbag"></i></button>
                     </div>
@@ -544,7 +544,7 @@
                             <div data-countdown="2021/09/15"></div>
                         </div>
                         <div class="prize-content">
-                            <h5 class="title"><a href="single-product.html">Ladies Smart Watch</a></h5>
+                            <h5 class="title"><a href="{{route('product', 1)}}">Ladies Smart Watch</a></h5>
                             <span class="price">
                                 <span class="old">$48.50</span>
                                 <span class="new">$38.50</span>
@@ -571,12 +571,12 @@
 </div>
 <!-- Feature product area End -->
 <!-- Fashion Area Start -->
-<div class="fashion-area" data-bg-image="assets/images/fashion/fashion-bg.webp">
+<div class="fashion-area" data-bg-image="/assets/images/fashion/fashion-bg.webp">
     <div class="container h-100">
         <div class="row justify-content-center align-items-center h-100">
             <div class="col-12 text-center">
                 <h2 class="title"> <span>Smart Fashion</span> With Smart Devices </h2>
-                <a href="shop-left-sidebar.html" class="btn btn-primary text-capitalize m-auto">Shop All Devices</a>
+                <a href="{{route('shop')}}" class="btn btn-primary text-capitalize m-auto">Shop All Devices</a>
             </div>
         </div>
     </div>
@@ -590,7 +590,7 @@
                 <!-- single item -->
                 <div class="single-feature">
                     <div class="feature-icon">
-                        <img src="assets/images/icons/1.png" alt="">
+                        <img src="/assets/images/icons/1.png" alt="">
                     </div>
                     <div class="feature-content">
                         <h4 class="title">Free Shipping</h4>
@@ -602,7 +602,7 @@
             <div class="single-feture-col mb-md-30px mb-lm-30px">
                 <div class="single-feature">
                     <div class="feature-icon">
-                        <img src="assets/images/icons/2.png" alt="">
+                        <img src="/assets/images/icons/2.png" alt="">
                     </div>
                     <div class="feature-content">
                         <h4 class="title">Card Payments</h4>
@@ -614,7 +614,7 @@
             <div class="single-feture-col">
                 <div class="single-feature">
                     <div class="feature-icon">
-                        <img src="assets/images/icons/3.png" alt="">
+                        <img src="/assets/images/icons/3.png" alt="">
                     </div>
                     <div class="feature-content">
                         <h4 class="title">Easy Returns</h4>
@@ -644,19 +644,19 @@
             <div class="col-lg-6 col-sm-6 mb-xs-30px">
                 <div class="single-blog">
                     <div class="blog-image">
-                        <a href="blog-single-left-sidebar.html"><img src="assets/images/blog-image/1.webp"
+                        <a href="{{route('blog')}}"><img src="/assets/images/blog-image/1.webp"
                                 class="img-responsive w-100" alt=""></a>
                     </div>
                     <div class="blog-text">
                         <div class="blog-athor-date line-height-1">
                             <span class="blog-date"><i class="fa fa-calendar" aria-hidden="true"></i> 27,Jun 2030</span>
-                            <span><a class="blog-author" href="blog-grid.html"><i class="fa fa-user"
+                            <span><a class="blog-author" href="{{route('blog')}}"><i class="fa fa-user"
                                         aria-hidden="true"></i> Wild Nick</a></span>
                         </div>
-                        <h5 class="blog-heading"><a class="blog-heading-link" href="blog-single-left-sidebar.html">10
+                        <h5 class="blog-heading"><a class="blog-heading-link" href="{{route('blog-single', 1)}}">10
                                 Quick Tips About Smart Product</a></h5>
                         <p>Lorem ipsum dolor sit amet consl adipisi elit, sed do eiusmod templ incididunt ut labore</p>
-                        <a href="blog-single-left-sidebar.html" class="btn btn-primary blog-btn"> Read More</a>
+                        <a href="{{route('blog-single', 1)}}" class="btn btn-primary blog-btn"> Read More</a>
                     </div>
                 </div>
             </div>
@@ -664,19 +664,19 @@
             <div class="col-lg-6 col-sm-6">
                 <div class="single-blog">
                     <div class="blog-image">
-                        <a href="blog-single-left-sidebar.html"><img src="assets/images/blog-image/2.webp"
+                        <a href="{{route('blog-single', 1)}}"><img src="/assets/images/blog-image/2.webp"
                                 class="img-responsive w-100" alt=""></a>
                     </div>
                     <div class="blog-text">
                         <div class="blog-athor-date line-height-1">
                             <span class="blog-date"><i class="fa fa-calendar" aria-hidden="true"></i> 27,Jun 2030</span>
-                            <span><a class="blog-author" href="blog-grid.html"><i class="fa fa-user"
+                            <span><a class="blog-author" href="{{route('blog')}}"><i class="fa fa-user"
                                         aria-hidden="true"></i> Oaklee Odom</a></span>
                         </div>
-                        <h5 class="blog-heading"><a class="blog-heading-link" href="blog-single-left-sidebar.html">5
+                        <h5 class="blog-heading"><a class="blog-heading-link" href="{{route('blog-single', 1)}}">5
                                 Real-Life Lessons About Smart Product</a></h5>
                         <p>Lorem ipsum dolor sit amet consl adipisi elit, sed do eiusmod templ incididunt ut labore</p>
-                        <a href="blog-single-left-sidebar.html" class="btn btn-primary blog-btn"> Read More</a>
+                        <a href="{{route('blog-single', 1)}}" class="btn btn-primary blog-btn"> Read More</a>
                     </div>
                 </div>
             </div>

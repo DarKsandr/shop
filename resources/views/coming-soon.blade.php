@@ -4,11 +4,11 @@
 
 @section('body')
 <div class="main-wrapper">
-    <div class="coming-soon-section pt-100px pb-100px" data-bg-image="assets/images/coming-soon/coming-soon-bg.webp">
+    <div class="coming-soon-section pt-100px pb-100px" data-bg-image="/assets/images/coming-soon/coming-soon-bg.webp">
         <div class="container">
             <div class="coming-soon-content">
                 <div class="logo">
-                    <a href="{{route('index')}}"><img src="assets/images/logo/footer-logo.png" alt="Site Logo" /></a>
+                    <a href="{{route('index')}}"><img src="/assets/images/logo/footer-logo.png" alt="Site Logo" /></a>
                 </div>
                 <h2 class="title">Coming soon</h2>
                 <div class="countdown3" data-countdown="2023/01/01"></div>
@@ -32,8 +32,8 @@
 @endsection
 
 @section('script')
-<script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
-<script src="assets/js/plugins/jquery.countdown.min.js"></script>
+<script src="/assets/js/vendor/jquery-3.6.0.min.js"></script>
+<script src="/assets/js/plugins/jquery.countdown.min.js"></script>
 <script>
     $('[data-bg-image]').each(function() {
         var $this = $(this),

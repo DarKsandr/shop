@@ -23,7 +23,7 @@ Route::get('/about', function () {
 
 Route::get('/my-account', function () {
     return view('my-account');
-})->name("my-account");
+})->middleware('auth')->name("my-account");
 
 Route::get('/faq', function () {
     return view('faq');
@@ -56,5 +56,25 @@ Route::get('/thank-you-page', function () {
 Route::get('/order-tracking', function () {
     return view('order-tracking');
 })->name("order-tracking");
+
+Route::get('/shop', function () {
+    return view('shop.shop-left-sidebar');
+})->name("shop");
+
+Route::get('/product/{id}', function ($id) {
+    return view('product.single-product', compact('id'));
+})->name("product");
+
+Route::get('/blog', function () {
+    return view('blog.blog-grid-left-sidebar');
+})->name("blog");
+
+Route::get('/blog/{id}', function ($id) {
+    return view('blog.blog-single', compact('id'));
+})->name("blog-single");
+
+Route::get('/checkout', function () {
+    return view('checkout');
+})->name("checkout");
 
 require __DIR__.'/auth.php';

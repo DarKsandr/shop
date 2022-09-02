@@ -38,7 +38,7 @@
                             cupidatat non proident sunt in culpa</p>
                     </div>
                     <div class="promo-video">
-                        <img src="assets/images/about/promo-video-img.webp" alt="">
+                        <img src="/assets/images/about/promo-video-img.webp" alt="">
                         <a href="https://youtu.be/7rmQIzbgpoA" class="venobox overlay-box" data-vbtype="video"><span
                                 class="fa fa-play"><i class="ripple"></i></span></a>
                     </div>
@@ -64,7 +64,7 @@
                 <!-- Single Team -->
                 <div class="team-wrapper ">
                     <div class="team-image overflow-hidden">
-                        <img src="assets/images/team/1.webp" alt="">
+                        <img src="/assets/images/team/1.webp" alt="">
                         <ul class="team-social d-flex">
                             <li>
                                 <a class="m-0" title="Twitter" target="_blank" rel="noopener noreferrer" href="#"><i
@@ -100,7 +100,7 @@
                 <!-- Single Team -->
                 <div class="team-wrapper">
                     <div class="team-image overflow-hidden">
-                        <img src="assets/images/team/2.webp" alt="">
+                        <img src="/assets/images/team/2.webp" alt="">
                         <ul class="team-social d-flex">
                             <li>
                                 <a class="m-0" title="Twitter" target="_blank" rel="noopener noreferrer" href="#"><i
@@ -136,7 +136,7 @@
                 <!-- Single Team -->
                 <div class="team-wrapper">
                     <div class="team-image overflow-hidden">
-                        <img src="assets/images/team/3.webp" alt="">
+                        <img src="/assets/images/team/3.webp" alt="">
                         <ul class="team-social d-flex">
                             <li>
                                 <a class="m-0" title="Twitter" target="_blank" rel="noopener noreferrer" href="#"><i
@@ -180,7 +180,7 @@
                 <!-- single item -->
                 <div class="single-feature">
                     <div class="feature-icon">
-                        <img src="assets/images/icons/1.png" alt="">
+                        <img src="/assets/images/icons/1.png" alt="">
                     </div>
                     <div class="feature-content">
                         <h4 class="title">Free Shipping</h4>
@@ -192,7 +192,7 @@
             <div class="single-feture-col mb-md-30px mb-lm-30px">
                 <div class="single-feature">
                     <div class="feature-icon">
-                        <img src="assets/images/icons/2.png" alt="">
+                        <img src="/assets/images/icons/2.png" alt="">
                     </div>
                     <div class="feature-content">
                         <h4 class="title">Card Payments</h4>
@@ -204,7 +204,7 @@
             <div class="single-feture-col">
                 <div class="single-feature">
                     <div class="feature-icon">
-                        <img src="assets/images/icons/3.png" alt="">
+                        <img src="/assets/images/icons/3.png" alt="">
                     </div>
                     <div class="feature-content">
                         <h4 class="title">Easy Returns</h4>
@@ -242,7 +242,7 @@
                                 </div>
                                 <div class="testi-author">
                                     <div class="author-image">
-                                        <img class="img-responsive" src="assets/images/testimonial/1.png" alt="">
+                                        <img class="img-responsive" src="/assets/images/testimonial/1.png" alt="">
                                     </div>
                                     <div class="author-name">
                                         <h4 class="name">Regan Rosen<span>Client</span></h4>
@@ -259,7 +259,7 @@
                                 </div>
                                 <div class="testi-author">
                                     <div class="author-image">
-                                        <img class="img-responsive" src="assets/images/testimonial/1.png" alt="">
+                                        <img class="img-responsive" src="/assets/images/testimonial/1.png" alt="">
                                     </div>
                                     <div class="author-name">
                                         <h4 class="name">Regan Rosen<span>Client</span></h4>
@@ -276,7 +276,7 @@
                                 </div>
                                 <div class="testi-author">
                                     <div class="author-image">
-                                        <img class="img-responsive" src="assets/images/testimonial/1.png" alt="">
+                                        <img class="img-responsive" src="/assets/images/testimonial/1.png" alt="">
                                     </div>
                                     <div class="author-name">
                                         <h4 class="name">Regan Rosen<span>Client</span></h4>
@@ -293,7 +293,7 @@
                                 </div>
                                 <div class="testi-author">
                                     <div class="author-image">
-                                        <img class="img-responsive" src="assets/images/testimonial/1.png" alt="">
+                                        <img class="img-responsive" src="/assets/images/testimonial/1.png" alt="">
                                     </div>
                                     <div class="author-name">
                                         <h4 class="name">Regan Rosen<span>Client</span></h4>
@@ -330,19 +330,19 @@
             <div class="col-lg-6 col-sm-6 mb-xs-30px">
                 <div class="single-blog">
                     <div class="blog-image">
-                        <a href="blog-single-left-sidebar.html"><img src="assets/images/blog-image/1.webp"
+                        <a href="{{route('blog-single', 1)}}"><img src="/assets/images/blog-image/1.webp"
                                 class="img-responsive w-100" alt=""></a>
                     </div>
                     <div class="blog-text">
                         <div class="blog-athor-date line-height-1">
                             <span class="blog-date"><i class="fa fa-calendar" aria-hidden="true"></i> 27,Jun 2030</span>
-                            <span><a class="blog-author" href="blog-grid.html"><i class="fa fa-user"
+                            <span><a class="blog-author" href="{{route('blog')}}"><i class="fa fa-user"
                                         aria-hidden="true"></i> Oaklee Odom</a></span>
                         </div>
-                        <h5 class="blog-heading"><a class="blog-heading-link" href="blog-single-left-sidebar.html">Lorem
+                        <h5 class="blog-heading"><a class="blog-heading-link" href="{{route('blog-single', 1)}}">Lorem
                                 ipsum dolor sit amet conse adip</a></h5>
                         <p>Lorem ipsum dolor sit amet consl adipisi elit, sed do eiusmod templ incididunt ut labore</p>
-                        <a href="blog-single-left-sidebar.html" class="btn btn-primary blog-btn"> Read More</a>
+                        <a href="{{route('blog-single', 1)}}" class="btn btn-primary blog-btn"> Read More</a>
                     </div>
                 </div>
             </div>
@@ -350,19 +350,19 @@
             <div class="col-lg-6 col-sm-6">
                 <div class="single-blog">
                     <div class="blog-image">
-                        <a href="blog-single-left-sidebar.html"><img src="assets/images/blog-image/2.webp"
+                        <a href="{{route('blog-single', 1)}}"><img src="/assets/images/blog-image/2.webp"
                                 class="img-responsive w-100" alt=""></a>
                     </div>
                     <div class="blog-text">
                         <div class="blog-athor-date line-height-1">
                             <span class="blog-date"><i class="fa fa-calendar" aria-hidden="true"></i> 27,Jun 2030</span>
-                            <span><a class="blog-author" href="blog-grid.html"><i class="fa fa-user"
+                            <span><a class="blog-author" href="{{route('blog')}}"><i class="fa fa-user"
                                         aria-hidden="true"></i> Oaklee Odom</a></span>
                         </div>
-                        <h5 class="blog-heading"><a class="blog-heading-link" href="blog-single-left-sidebar.html">Lorem
+                        <h5 class="blog-heading"><a class="blog-heading-link" href="{{route('blog-single', 1)}}">Lorem
                                 ipsum dolor sit amet conse adip</a></h5>
                         <p>Lorem ipsum dolor sit amet consl adipisi elit, sed do eiusmod templ incididunt ut labore</p>
-                        <a href="blog-single-left-sidebar.html" class="btn btn-primary blog-btn"> Read More</a>
+                        <a href="{{route('blog-single', 1)}}" class="btn btn-primary blog-btn"> Read More</a>
                     </div>
                 </div>
             </div>

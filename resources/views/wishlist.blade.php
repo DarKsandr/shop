@@ -43,7 +43,7 @@
                                 <tr>
                                     <td class="product-thumbnail">
                                         <a href="#"><img class="img-responsive ml-15px"
-                                                src="assets/images/product-image/1.webp" alt="" /></a>
+                                                src="/assets/images/product-image/1.webp" alt="" /></a>
                                     </td>
                                     <td class="product-name"><a href="#">Modern Smart Phone</a></td>
                                     <td class="product-price-cart"><span class="amount">$60.00</span></td>
@@ -60,7 +60,7 @@
                                 <tr>
                                     <td class="product-thumbnail">
                                         <a href="#"><img class="img-responsive ml-15px"
-                                                src="assets/images/product-image/2.webp" alt="" /></a>
+                                                src="/assets/images/product-image/2.webp" alt="" /></a>
                                     </td>
                                     <td class="product-name"><a href="#">Bluetooth Headphone</a></td>
                                     <td class="product-price-cart"><span class="amount">$50.00</span></td>
@@ -77,7 +77,7 @@
                                 <tr>
                                     <td class="product-thumbnail">
                                         <a href="#"><img class="img-responsive ml-15px"
-                                                src="assets/images/product-image/3.webp" alt="" /></a>
+                                                src="/assets/images/product-image/3.webp" alt="" /></a>
                                     </td>
                                     <td class="product-name"><a href="#">Smart Music Box</a></td>
                                     <td class="product-price-cart"><span class="amount">$70.00</span></td>

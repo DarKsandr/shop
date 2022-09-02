@@ -11,7 +11,7 @@
                 <h2 class="breadcrumb-title">Blog</h2>
                 <!-- breadcrumb-list start -->
                 <ul class="breadcrumb-list">
-                    <li class="breadcrumb-item"><a href="{{route('index')}}">Home</a></li>
+                    <li class="breadcrumb-item"><a href="{{route('index')}}}">Home</a></li>
                     <li class="breadcrumb-item active">Blog</li>
                 </ul>
                 <!-- breadcrumb-list end -->
@@ -29,21 +29,21 @@
                     <div class="col-lg-6 col-md-6 mb-50px">
                         <div class="single-blog">
                             <div class="blog-image">
-                                <a href="blog-single-left-sidebar.html"><img src="assets/images/blog-image/3.webp"
+                                <a href="{{route('blog-single', 1)}}"><img src="/assets/images/blog-image/3.webp"
                                         class="img-responsive w-100" alt=""></a>
                             </div>
                             <div class="blog-text">
                                 <div class="blog-athor-date line-height-1">
                                     <span class="blog-date"><i class="fa fa-calendar" aria-hidden="true"></i> 27,Jun
                                         2030</span>
-                                    <span><a class="blog-author" href="blog-grid.html"><i class="fa fa-user"
+                                    <span><a class="blog-author" href="{{route('blog')}}"><i class="fa fa-user"
                                                 aria-hidden="true"></i> Wild Nick</a></span>
                                 </div>
                                 <h5 class="blog-heading"><a class="blog-heading-link"
-                                        href="blog-single-left-sidebar.html">The Pros and Cons of Smart Product</a></h5>
+                                        href="{{route('blog-single', 1)}}">The Pros and Cons of Smart Product</a></h5>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid
                                     ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                                <a href="blog-single-left-sidebar.html" class="btn btn-primary blog-btn"> Read More</a>
+                                <a href="{{route('blog-single', 1)}}" class="btn btn-primary blog-btn"> Read More</a>
                             </div>
                         </div>
                     </div>
@@ -51,22 +51,22 @@
                     <div class="col-lg-6 col-md-6 mb-50px">
                         <div class="single-blog ">
                             <div class="blog-image">
-                                <a href="blog-single-left-sidebar.html"><img src="assets/images/blog-image/4.webp"
+                                <a href="{{route('blog-single', 1)}}"><img src="/assets/images/blog-image/4.webp"
                                         class="img-responsive w-100" alt=""></a>
                             </div>
                             <div class="blog-text">
                                 <div class="blog-athor-date line-height-1">
                                     <span class="blog-date"><i class="fa fa-calendar" aria-hidden="true"></i> 27,Jun
                                         2030</span>
-                                    <span><a class="blog-author" href="blog-grid.html"><i class="fa fa-user"
+                                    <span><a class="blog-author" href="{{route('blog')}}"><i class="fa fa-user"
                                                 aria-hidden="true"></i> Oaklee Odom</a></span>
                                 </div>
                                 <h5 class="blog-heading"><a class="blog-heading-link"
-                                        href="blog-single-left-sidebar.html">20 Insightful Quotes About Smart
+                                        href="{{route('blog-single', 1)}}">20 Insightful Quotes About Smart
                                         Product</a></h5>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid
                                     ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                                <a href="blog-single-left-sidebar.html" class="btn btn-primary blog-btn"> Read More</a>
+                                <a href="{{route('blog-single', 1)}}" class="btn btn-primary blog-btn"> Read More</a>
                             </div>
                         </div>
                     </div>
@@ -76,13 +76,13 @@
                             <div class="blog-post-media swiper-container slider-nav-style-1 small-nav">
                                 <div class="blog-gallery swiper-wrapper">
                                     <div class="gallery-item swiper-slide">
-                                        <a href="#"><img src="assets/images/blog-image/5.webp" alt="blog" /></a>
+                                        <a href="#"><img src="/assets/images/blog-image/5.webp" alt="blog" /></a>
                                     </div>
                                     <div class="gallery-item swiper-slide">
-                                        <a href="#"><img src="assets/images/blog-image/3.webp" alt="blog" /></a>
+                                        <a href="#"><img src="/assets/images/blog-image/3.webp" alt="blog" /></a>
                                     </div>
                                     <div class="gallery-item swiper-slide">
-                                        <a href="#"><img src="assets/images/blog-image/4.webp" alt="blog" /></a>
+                                        <a href="#"><img src="/assets/images/blog-image/4.webp" alt="blog" /></a>
                                     </div>
                                 </div>
                                 <!-- Add Arrows -->
@@ -95,15 +95,15 @@
                                 <div class="blog-athor-date line-height-1">
                                     <span class="blog-date"><i class="fa fa-calendar" aria-hidden="true"></i> 27,Jun
                                         2030</span>
-                                    <span><a class="blog-author" href="blog-grid.html"><i class="fa fa-user"
+                                    <span><a class="blog-author" href="{{route('blog')}}"><i class="fa fa-user"
                                                 aria-hidden="true"></i> Oslad Den</a></span>
                                 </div>
                                 <h5 class="blog-heading"><a class="blog-heading-link"
-                                        href="blog-single-left-sidebar.html">12 coz You Shouldn't Invest in Smart
+                                        href="{{route('blog-single', 1)}}">12 coz You Shouldn't Invest in Smart
                                         Product</a></h5>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid
                                     ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                                <a href="blog-single-left-sidebar.html" class="btn btn-primary blog-btn"> Read More</a>
+                                <a href="{{route('blog-single', 1)}}" class="btn btn-primary blog-btn"> Read More</a>
                             </div>
                         </div>
                     </div>
@@ -120,15 +120,15 @@
                                 <div class="blog-athor-date line-height-1">
                                     <span class="blog-date"><i class="fa fa-calendar" aria-hidden="true"></i> 27,Jun
                                         2030</span>
-                                    <span><a class="blog-author" href="blog-grid.html"><i class="fa fa-user"
+                                    <span><a class="blog-author" href="{{route('blog')}}"><i class="fa fa-user"
                                                 aria-hidden="true"></i>Odrl sala</a></span>
                                 </div>
                                 <h5 class="blog-heading"><a class="blog-heading-link"
-                                        href="blog-single-left-sidebar.html">The Biggest Problem With Smart Product</a>
+                                        href="{{route('blog-single', 1)}}">The Biggest Problem With Smart Product</a>
                                 </h5>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid
                                     ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                                <a href="blog-single-left-sidebar.html" class="btn btn-primary blog-btn"> Read More</a>
+                                <a href="{{route('blog-single', 1)}}" class="btn btn-primary blog-btn"> Read More</a>
                             </div>
                         </div>
                     </div>
@@ -141,8 +141,8 @@
                                         data-gall="gall-video" data-autoplay="true" data-vbtype="video"
                                         href="https://youtu.be/Hx64uvCA_zQ">
                                         <img class="img-responsive w-100 thumb-image ratio ratio-16x9"
-                                            src="assets/images/blog-image/5.webp" alt="">
-                                        <img class="icon" src="assets/images/icons/icon-youtube-play.png" alt="">
+                                            src="/assets/images/blog-image/5.webp" alt="">
+                                        <img class="icon" src="/assets/images/icons/icon-youtube-play.png" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -150,15 +150,15 @@
                                 <div class="blog-athor-date line-height-1">
                                     <span class="blog-date"><i class="fa fa-calendar" aria-hidden="true"></i> 27,Jun
                                         2030</span>
-                                    <span><a class="blog-author" href="blog-grid.html"><i class="fa fa-user"
+                                    <span><a class="blog-author" href="{{route('blog')}}"><i class="fa fa-user"
                                                 aria-hidden="true"></i> Awesom Suk</a></span>
                                 </div>
                                 <h5 class="blog-heading"><a class="blog-heading-link"
-                                        href="blog-single-left-sidebar.html">20 Fabulous Infographics About Smart
+                                        href="{{route('blog-single', 1)}}">20 Fabulous Infographics About Smart
                                         Product</a></h5>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid
                                     ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                                <a href="blog-single-left-sidebar.html" class="btn btn-primary blog-btn"> Read More</a>
+                                <a href="{{route('blog-single', 1)}}" class="btn btn-primary blog-btn"> Read More</a>
                             </div>
                         </div>
                     </div>
@@ -166,22 +166,22 @@
                     <div class="col-lg-6 col-md-6 mb-50px">
                         <div class="single-blog">
                             <div class="blog-image">
-                                <a href="blog-single-left-sidebar.html"><img src="assets/images/blog-image/3.webp"
+                                <a href="{{route('blog-single', 1)}}"><img src="/assets/images/blog-image/3.webp"
                                         class="img-responsive w-100" alt=""></a>
                             </div>
                             <div class="blog-text">
                                 <div class="blog-athor-date line-height-1">
                                     <span class="blog-date"><i class="fa fa-calendar" aria-hidden="true"></i> 27,Jun
                                         2030</span>
-                                    <span><a class="blog-author" href="blog-grid.html"><i class="fa fa-user"
+                                    <span><a class="blog-author" href="{{route('blog')}}"><i class="fa fa-user"
                                                 aria-hidden="true"></i> Dom Aokle</a></span>
                                 </div>
                                 <h5 class="blog-heading"><a class="blog-heading-link"
-                                        href="blog-single-left-sidebar.html">This Week's Top Stories About Smart
+                                        href="{{route('blog-single', 1)}}">This Week's Top Stories About Smart
                                         Product</a></h5>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid
                                     ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                                <a href="blog-single-left-sidebar.html" class="btn btn-primary blog-btn"> Read More</a>
+                                <a href="{{route('blog-single', 1)}}" class="btn btn-primary blog-btn"> Read More</a>
                             </div>
                         </div>
                     </div>
@@ -189,22 +189,22 @@
                     <div class="col-lg-6 col-md-6 mb-50px">
                         <div class="single-blog">
                             <div class="blog-image">
-                                <a href="blog-single-left-sidebar.html"><img src="assets/images/blog-image/4.webp"
+                                <a href="{{route('blog-single', 1)}}"><img src="/assets/images/blog-image/4.webp"
                                         class="img-responsive w-100" alt=""></a>
                             </div>
                             <div class="blog-text">
                                 <div class="blog-athor-date line-height-1">
                                     <span class="blog-date"><i class="fa fa-calendar" aria-hidden="true"></i> 27,Jun
                                         2030</span>
-                                    <span><a class="blog-author" href="blog-grid.html"><i class="fa fa-user"
+                                    <span><a class="blog-author" href="{{route('blog')}}"><i class="fa fa-user"
                                                 aria-hidden="true"></i>Tanvir Boss</a></span>
                                 </div>
                                 <h5 class="blog-heading"><a class="blog-heading-link"
-                                        href="blog-single-left-sidebar.html">The 13 Best Pinterest Boards for Smart
+                                        href="{{route('blog-single', 1)}}">The 13 Best Pinterest Boards for Smart
                                         Product</a></h5>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid
                                     ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                                <a href="blog-single-left-sidebar.html" class="btn btn-primary blog-btn"> Read More</a>
+                                <a href="{{route('blog-single', 1)}}" class="btn btn-primary blog-btn"> Read More</a>
                             </div>
                         </div>
                     </div>
@@ -212,22 +212,22 @@
                     <div class="col-lg-6 col-md-6 mb-50px">
                         <div class="single-blog">
                             <div class="blog-image">
-                                <a href="blog-single-left-sidebar.html"><img src="assets/images/blog-image/5.webp"
+                                <a href="{{route('blog-single', 1)}}"><img src="/assets/images/blog-image/5.webp"
                                         class="img-responsive w-100" alt=""></a>
                             </div>
                             <div class="blog-text">
                                 <div class="blog-athor-date line-height-1">
                                     <span class="blog-date"><i class="fa fa-calendar" aria-hidden="true"></i> 27,Jun
                                         2030</span>
-                                    <span><a class="blog-author" href="blog-grid.html"><i class="fa fa-user"
+                                    <span><a class="blog-author" href="{{route('blog')}}"><i class="fa fa-user"
                                                 aria-hidden="true"></i> Omite Andle</a></span>
                                 </div>
                                 <h5 class="blog-heading"><a class="blog-heading-link"
-                                        href="blog-single-left-sidebar.html"> Books About Smart Product You Should
+                                        href="{{route('blog-single', 1)}}"> Books About Smart Product You Should
                                         Read</a></h5>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid
                                     ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                                <a href="blog-single-left-sidebar.html" class="btn btn-primary blog-btn"> Read More</a>
+                                <a href="{{route('blog-single', 1)}}" class="btn btn-primary blog-btn"> Read More</a>
                             </div>
                         </div>
                     </div>
@@ -282,52 +282,52 @@
                             <div class="recent-post-widget">
                                 <div class="recent-single-post d-flex">
                                     <div class="thumb-side">
-                                        <a href="blog-single-left-sidebar.html"><img
-                                                src="assets/images/blog-image/post-1.webp" alt="" /></a>
+                                        <a href="{{route('blog-single', 1)}}"><img
+                                                src="/assets/images/blog-image/post-1.webp" alt="" /></a>
                                     </div>
                                     <div class="media-side">
                                         <span class="date"><i class="fa fa-calendar" aria-hidden="true"></i>27 jun,
                                             2022</span>
-                                        <h5><a href="blog-single-left-sidebar.html">Lorem ipsum dolorl
+                                        <h5><a href="{{route('blog-single', 1)}}">Lorem ipsum dolorl
                                                 amet conse adip</a>
                                         </h5>
                                     </div>
                                 </div>
                                 <div class="recent-single-post d-flex">
                                     <div class="thumb-side">
-                                        <a href="blog-single-left-sidebar.html"><img
-                                                src="assets/images/blog-image/post-2.webp" alt="" /></a>
+                                        <a href="{{route('blog-single', 1)}}"><img
+                                                src="/assets/images/blog-image/post-2.webp" alt="" /></a>
                                     </div>
                                     <div class="media-side">
                                         <span class="date"><i class="fa fa-calendar" aria-hidden="true"></i>27 jun,
                                             2022</span>
-                                        <h5><a href="blog-single-left-sidebar.html">Lorem ipsum dolorl
+                                        <h5><a href="{{route('blog-single', 1)}}">Lorem ipsum dolorl
                                                 amet conse adip</a>
                                         </h5>
                                     </div>
                                 </div>
                                 <div class="recent-single-post d-flex">
                                     <div class="thumb-side">
-                                        <a href="blog-single-left-sidebar.html"><img
-                                                src="assets/images/blog-image/post-3.webp" alt="" /></a>
+                                        <a href="{{route('blog-single', 1)}}"><img
+                                                src="/assets/images/blog-image/post-3.webp" alt="" /></a>
                                     </div>
                                     <div class="media-side">
                                         <span class="date"><i class="fa fa-calendar" aria-hidden="true"></i>27 jun,
                                             2022</span>
-                                        <h5><a href="blog-single-left-sidebar.html">Lorem ipsum dolorl
+                                        <h5><a href="{{route('blog-single', 1)}}">Lorem ipsum dolorl
                                                 amet conse adip</a>
                                         </h5>
                                     </div>
                                 </div>
                                 <div class="recent-single-post d-flex">
                                     <div class="thumb-side">
-                                        <a href="blog-single-left-sidebar.html"><img
-                                                src="assets/images/blog-image/post-1.webp" alt="" /></a>
+                                        <a href="{{route('blog-single', 1)}}"><img
+                                                src="/assets/images/blog-image/post-1.webp" alt="" /></a>
                                     </div>
                                     <div class="media-side">
                                         <span class="date"><i class="fa fa-calendar" aria-hidden="true"></i>27 jun,
                                             2022</span>
-                                        <h5><a href="blog-single-left-sidebar.html">Lorem ipsum dolorl
+                                        <h5><a href="{{route('blog-single', 1)}}">Lorem ipsum dolorl
                                                 amet conse adip</a>
                                         </h5>
                                     </div>

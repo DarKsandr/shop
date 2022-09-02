@@ -55,7 +55,7 @@
                     <div class="contact-info">
                         <div class="single-contact">
                             <div class="icon-box">
-                                <img src="assets/images/icons/contact-1.png" alt="">
+                                <img src="/assets/images/icons/contact-1.png" alt="">
                             </div>
                             <div class="info-box">
                                 <h5 class="title">Address</h5>
@@ -65,7 +65,7 @@
                         </div>
                         <div class="single-contact">
                             <div class="icon-box">
-                                <img src="assets/images/icons/contact-2.png" alt="">
+                                <img src="/assets/images/icons/contact-2.png" alt="">
                             </div>
                             <div class="info-box">
                                 <h5 class="title">Phone No</h5>
@@ -75,7 +75,7 @@
                         </div>
                         <div class="single-contact m-0">
                             <div class="icon-box">
-                                <img src="assets/images/icons/contact-3.png" alt="">
+                                <img src="/assets/images/icons/contact-3.png" alt="">
                             </div>
                             <div class="info-box">
                                 <h5 class="title">Email/Web</h5>

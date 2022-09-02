@@ -3,7 +3,7 @@
 @section('title', '404 page')
 
 @section('content')
-<div class="section-404 section" data-bg-image="assets/images/404/bg-404.webp">
+<div class="section-404 section" data-bg-image="/assets/images/404/bg-404.webp">
     <div class="container">
         <div class="content-404">
             <h1 class="title">Oops!</h1>

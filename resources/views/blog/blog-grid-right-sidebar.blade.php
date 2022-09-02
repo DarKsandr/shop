@@ -29,7 +29,7 @@
                     <div class="col-lg-6 col-md-6 mb-50px">
                         <div class="single-blog">
                             <div class="blog-image">
-                                <a href="blog-single-left-sidebar.html"><img src="assets/images/blog-image/3.webp"
+                                <a href="blog-single-left-sidebar.html"><img src="/assets/images/blog-image/3.webp"
                                         class="img-responsive w-100" alt=""></a>
                             </div>
                             <div class="blog-text">
@@ -51,7 +51,7 @@
                     <div class="col-lg-6 col-md-6 mb-50px">
                         <div class="single-blog ">
                             <div class="blog-image">
-                                <a href="blog-single-left-sidebar.html"><img src="assets/images/blog-image/4.webp"
+                                <a href="blog-single-left-sidebar.html"><img src="/assets/images/blog-image/4.webp"
                                         class="img-responsive w-100" alt=""></a>
                             </div>
                             <div class="blog-text">
@@ -76,13 +76,13 @@
                             <div class="blog-post-media swiper-container slider-nav-style-1 small-nav">
                                 <div class="blog-gallery swiper-wrapper">
                                     <div class="gallery-item swiper-slide">
-                                        <a href="#"><img src="assets/images/blog-image/5.webp" alt="blog" /></a>
+                                        <a href="#"><img src="/assets/images/blog-image/5.webp" alt="blog" /></a>
                                     </div>
                                     <div class="gallery-item swiper-slide">
-                                        <a href="#"><img src="assets/images/blog-image/3.webp" alt="blog" /></a>
+                                        <a href="#"><img src="/assets/images/blog-image/3.webp" alt="blog" /></a>
                                     </div>
                                     <div class="gallery-item swiper-slide">
-                                        <a href="#"><img src="assets/images/blog-image/4.webp" alt="blog" /></a>
+                                        <a href="#"><img src="/assets/images/blog-image/4.webp" alt="blog" /></a>
                                     </div>
                                 </div>
                                 <!-- Add Arrows -->
@@ -141,8 +141,8 @@
                                         data-gall="gall-video" data-autoplay="true" data-vbtype="video"
                                         href="https://youtu.be/Hx64uvCA_zQ">
                                         <img class="img-responsive w-100 thumb-image ratio ratio-16x9"
-                                            src="assets/images/blog-image/5.webp" alt="">
-                                        <img class="icon" src="assets/images/icons/icon-youtube-play.png" alt="">
+                                            src="/assets/images/blog-image/5.webp" alt="">
+                                        <img class="icon" src="/assets/images/icons/icon-youtube-play.png" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -166,7 +166,7 @@
                     <div class="col-lg-6 col-md-6 mb-50px">
                         <div class="single-blog">
                             <div class="blog-image">
-                                <a href="blog-single-left-sidebar.html"><img src="assets/images/blog-image/3.webp"
+                                <a href="blog-single-left-sidebar.html"><img src="/assets/images/blog-image/3.webp"
                                         class="img-responsive w-100" alt=""></a>
                             </div>
                             <div class="blog-text">
@@ -189,7 +189,7 @@
                     <div class="col-lg-6 col-md-6 mb-50px">
                         <div class="single-blog">
                             <div class="blog-image">
-                                <a href="blog-single-left-sidebar.html"><img src="assets/images/blog-image/4.webp"
+                                <a href="blog-single-left-sidebar.html"><img src="/assets/images/blog-image/4.webp"
                                         class="img-responsive w-100" alt=""></a>
                             </div>
                             <div class="blog-text">
@@ -212,7 +212,7 @@
                     <div class="col-lg-6 col-md-6 mb-50px">
                         <div class="single-blog">
                             <div class="blog-image">
-                                <a href="blog-single-left-sidebar.html"><img src="assets/images/blog-image/5.webp"
+                                <a href="blog-single-left-sidebar.html"><img src="/assets/images/blog-image/5.webp"
                                         class="img-responsive w-100" alt=""></a>
                             </div>
                             <div class="blog-text">
@@ -282,7 +282,7 @@
                                 <div class="recent-single-post d-flex">
                                     <div class="thumb-side">
                                         <a href="blog-single-left-sidebar.html"><img
-                                                src="assets/images/blog-image/post-1.webp" alt="" /></a>
+                                                src="/assets/images/blog-image/post-1.webp" alt="" /></a>
                                     </div>
                                     <div class="media-side">
                                         <span class="date"><i class="fa fa-calendar" aria-hidden="true"></i>27 jun,
@@ -295,7 +295,7 @@
                                 <div class="recent-single-post d-flex">
                                     <div class="thumb-side">
                                         <a href="blog-single-left-sidebar.html"><img
-                                                src="assets/images/blog-image/post-2.webp" alt="" /></a>
+                                                src="/assets/images/blog-image/post-2.webp" alt="" /></a>
                                     </div>
                                     <div class="media-side">
                                         <span class="date"><i class="fa fa-calendar" aria-hidden="true"></i>27 jun,
@@ -308,7 +308,7 @@
                                 <div class="recent-single-post d-flex">
                                     <div class="thumb-side">
                                         <a href="blog-single-left-sidebar.html"><img
-                                                src="assets/images/blog-image/post-3.webp" alt="" /></a>
+                                                src="/assets/images/blog-image/post-3.webp" alt="" /></a>
                                     </div>
                                     <div class="media-side">
                                         <span class="date"><i class="fa fa-calendar" aria-hidden="true"></i>27 jun,
@@ -321,7 +321,7 @@
                                 <div class="recent-single-post d-flex">
                                     <div class="thumb-side">
                                         <a href="blog-single-left-sidebar.html"><img
-                                                src="assets/images/blog-image/post-1.webp" alt="" /></a>
+                                                src="/assets/images/blog-image/post-1.webp" alt="" /></a>
                                     </div>
                                     <div class="media-side">
                                         <span class="date"><i class="fa fa-calendar" aria-hidden="true"></i>27 jun,

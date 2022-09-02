@@ -34,19 +34,19 @@
                                     <td class="first-column">Product</td>
                                     <td class="product-image-title">
                                         <a href="#" class="image"><img class="img-responsive"
-                                                src="assets/images/product-image/1.webp" alt="Compare Product" /></a>
+                                                src="/assets/images/product-image/1.webp" alt="Compare Product" /></a>
                                         <a href="#" class="category">Device</a>
                                         <a href="#" class="title">Modern Smart Phone</a>
                                     </td>
                                     <td class="product-image-title">
                                         <a href="#" class="image"><img class="img-responsive"
-                                                src="assets/images/product-image/2.webp" alt="Compare Product" /></a>
+                                                src="/assets/images/product-image/2.webp" alt="Compare Product" /></a>
                                         <a href="#" class="category">Accessories</a>
                                         <a href="#" class="title">Bluetooth Headphone</a>
                                     </td>
                                     <td class="product-image-title">
                                         <a href="#" class="image"><img class="img-responsive"
-                                                src="assets/images/product-image/3.webp" alt="Compare Product" /></a>
+                                                src="/assets/images/product-image/3.webp" alt="Compare Product" /></a>
                                         <a href="#" class="category">Smart</a>
                                         <a href="#" class="title">Smart Music Box</a>
                                     </td>
