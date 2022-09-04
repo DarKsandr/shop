@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,6 +13,9 @@
         content="Ample Admin Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
     <meta name="robots" content="noindex,nofollow">
     <title>Admin panel - @yield('title', 'Default')</title>
+
+    @yield('head:before')
+
     <link rel="canonical" href="https://www.wrappixel.com/templates/ample-admin-lite/" />
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/admin/plugins/images/favicon.png">
@@ -21,6 +25,8 @@
         href="/assets/admin/plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.css">
     <!-- Custom CSS -->
     <link href="/assets/admin/css/style.min.css" rel="stylesheet">
+
+    @yield('head:after')
 </head>
 
 <body>
@@ -96,7 +102,8 @@
                         <li>
                             <a class="profile-pic" href="#">
                                 <img src="/assets/admin/plugins/images/users/1.jpg" alt="user-img" width="36"
-                                    class="img-circle"><span class="text-white font-medium">{{Auth::user()->name}}</span></a>
+                                    class="img-circle"><span
+                                    class="text-white font-medium">{{ Auth::user()->name }}</span></a>
                         </li>
                         <!-- ============================================================== -->
                         <!-- User profile and search -->
@@ -119,17 +126,58 @@
                     <ul id="sidebarnav">
                         <!-- User Profile-->
                         <li class="sidebar-item pt-2">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link {{ Request::routeIs('admin.index') ? 'active' : '' }}" href="{{route('admin.index')}}"
-                                aria-expanded="false">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link {{ Request::routeIs('admin.index') ? 'active' : '' }}"
+                                href="{{ route('admin.index') }}" aria-expanded="false">
                                 {{-- <i class="far fa-clock" aria-hidden="true"></i> --}}
                                 <span class="hide-menu">Dashboard</span>
                             </a>
                         </li>
                         <li class="sidebar-item pt-2">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link {{ Request::routeIs('laratrust.roles-assignment.index') ? 'active' : '' }}" href="{{route('laratrust.roles-assignment.index')}}"
-                                aria-expanded="false">
+                            <a class="sidebar-link has-arrow waves-effect waves-dark {{ Request::routeIs('laratrust.*') ? 'active' : '' }}"
+                                href="javascript:void(0)" aria-expanded="false">
                                 {{-- <i class="far fa-clock" aria-hidden="true"></i> --}}
                                 <span class="hide-menu">Laratrust</span>
+                            </a>
+                            <ul aria-expanded="false" class="collapse first-level {{ Request::routeIs('laratrust.*') ? 'in' : '' }}">
+                                <li class="sidebar-item">
+                                    <a href="{{route('laratrust.roles-assignment.index')}}" class="sidebar-link">
+                                        <i class="mdi mdi-cards-variant"></i>
+                                        <span class="hide-menu">Roles assignment</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="{{route('laratrust.roles.index')}}" class="sidebar-link">
+                                        <i class="mdi mdi-cart"></i>
+                                        <span class="hide-menu">Roles</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="{{route('laratrust.permissions.index')}}" class="sidebar-link">
+                                        <i class="mdi mdi-cart-plus"></i>
+                                        <span class="hide-menu">Permissions</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item pt-2">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link {{ Request::routeIs('admin.product.*') ? 'active' : '' }}"
+                                href="{{ route('admin.product.index') }}" aria-expanded="false">
+                                {{-- <i class="far fa-clock" aria-hidden="true"></i> --}}
+                                <span class="hide-menu">Product</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item pt-2">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link {{ Request::routeIs('admin.category.*') ? 'active' : '' }}"
+                                href="{{ route('admin.category.index') }}" aria-expanded="false">
+                                {{-- <i class="far fa-clock" aria-hidden="true"></i> --}}
+                                <span class="hide-menu">Category</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item pt-2">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link {{ Request::routeIs('admin.tag.*') ? 'active' : '' }}"
+                                href="{{ route('admin.tag.index') }}" aria-expanded="false">
+                                {{-- <i class="far fa-clock" aria-hidden="true"></i> --}}
+                                <span class="hide-menu">Tag</span>
                             </a>
                         </li>
                         {{-- <li class="sidebar-item">
@@ -153,9 +201,17 @@
         <!-- Page wrapper  -->
         <!-- ============================================================== -->
         <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
 
-            @yield('content')
+                @yield('content')
 
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
         </div>
         <!-- ============================================================== -->
         <!-- End Page wrapper  -->
@@ -181,9 +237,8 @@
     <!--This page JavaScript -->
     <!--chartis chart-->
     <script src="/assets/admin/plugins/bower_components/chartist/dist/chartist.min.js"></script>
-    <script src="/assets/admin/plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js">
-    </script>
-    <script src="/assets/admin/js/pages/dashboards/dashboard1.js"></script>
+    <script src="/assets/admin/plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+    @yield('script:after')
 </body>
 
 </html>

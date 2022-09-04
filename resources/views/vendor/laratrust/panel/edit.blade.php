@@ -1,10 +1,8 @@
-@extends('laratrust::panel.layout')
+@extends('admin.layouts.laratrust')
 
 @section('title', $model ? "Edit {$type}" : "New {$type}")
 
-@section('content')
-  <div>
-  </div>
+@section('content:1')
   <div class="flex flex-col">
     <div class="-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-32">
       <form
