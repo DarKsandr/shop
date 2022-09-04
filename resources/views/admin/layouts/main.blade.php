@@ -121,8 +121,15 @@
                         <li class="sidebar-item pt-2">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link {{ Request::routeIs('admin.index') ? 'active' : '' }}" href="{{route('admin.index')}}"
                                 aria-expanded="false">
-                                <i class="far fa-clock" aria-hidden="true"></i>
+                                {{-- <i class="far fa-clock" aria-hidden="true"></i> --}}
                                 <span class="hide-menu">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item pt-2">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link {{ Request::routeIs('laratrust.roles-assignment.index') ? 'active' : '' }}" href="{{route('laratrust.roles-assignment.index')}}"
+                                aria-expanded="false">
+                                {{-- <i class="far fa-clock" aria-hidden="true"></i> --}}
+                                <span class="hide-menu">Laratrust</span>
                             </a>
                         </li>
                         {{-- <li class="sidebar-item">

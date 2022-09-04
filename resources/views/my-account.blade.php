@@ -35,7 +35,6 @@
                         <li><a href="#account-details" data-bs-toggle="tab" class="nav-link">Account details</a>
                         </li>
                         @if (Auth::user()->hasRole('admin'))
-                        <li><a href="{{route('laratrust.roles-assignment.index')}}" class="nav-link">Laratrust</a></li>
                         <li><a href="{{route('admin.index')}}" class="nav-link">Admin Panel</a></li>
                         @endif
                         <li>
