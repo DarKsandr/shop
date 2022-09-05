@@ -84,7 +84,9 @@
                     <!-- Right side toggle and nav items -->
                     <!-- ============================================================== -->
                     <ul class="navbar-nav ms-auto d-flex align-items-center">
-
+                        <li class="me-3">
+                            <a href="{{route('index')}}" class="btn btn-secondary" title="Home"><i class="fas fa-home"></i></a>
+                        </li>
                         <!-- ============================================================== -->
                         <!-- Search -->
                         <!-- ============================================================== -->

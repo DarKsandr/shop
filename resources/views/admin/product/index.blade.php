@@ -1,6 +1,6 @@
 @extends('admin.layouts.main')
 
-@section('title', 'Category')
+@section('title', 'Product')
 
 @section('content')
     <div class="row">
@@ -9,28 +9,35 @@
                 <div class="card-body">
                     @include('admin.layouts.status')
                     <div class="text-end">
-                        <a href="{{ route('admin.category.create') }}" class="btn btn-success">Create</a>
+                        <a href="{{ route('admin.product.create') }}" class="btn btn-success">Create</a>
                     </div>
                     <table class="table">
                         <thead>
                             <tr>
                                 <td>ID</td>
                                 <td>Name</td>
+                                <td>Sku</td>
+                                <td>Description</td>
+                                <td>Category</td>
+                                <td>Tags</td>
                                 <td>Created at</td>
                                 <td>Actions</td>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($categories as $category)
+                            @foreach ($products as $product)
                                 <tr>
-                                    <td>{{ $category->id }}</td>
-                                    <td>{{ $category->name }}</td>
-                                    <td>{{ $category->created_at }}</td>
+                                    <td>{{$product->id}}</td>
+                                    <td>{{$product->name}}</td>
+                                    <td>{{$product->sku}}</td>
+                                    <td title="{{$product->description}}">{{Str::limit($product->description, 150)}}</td>
+                                    <td>{{$product->category->name}}</td>
+                                    <td>{{$product->tags_view()}}</td>
+                                    <td>{{$product->created_at}}</td>
                                     <td>
                                         <div class="btn-group">
-                                            <a href="{{route('admin.category.edit', $category->id)}}" class="btn btn-primary">Edit</a>
-                                            <form action="{{route('admin.category.destroy', $category->id)}}" method="post">
-                                                @csrf
+                                            <a href="{{route('admin.product.edit', $product->id)}}" class="btn btn-primary">Edit</a>
+                                            <form action="{{route('admin.product.destroy', $product->id)}}" method="post">
                                                 @method('DELETE')
                                                 <button type="submit" class="btn btn-danger">Delete</button>
                                             </form>
@@ -40,7 +47,7 @@
                             @endforeach
                         </tbody>
                     </table>
-                    {{ $categories->links() }}
+                    {{ $products->links() }}
                 </div>
             </div>
         </div>

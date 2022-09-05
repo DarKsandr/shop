@@ -14,7 +14,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        $products = Product::with(["category", "tag_relation.tag"])->paginate(15);
+        return view('admin.product.index', compact('products'));
     }
 
     /**
@@ -24,7 +25,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        $type = "create";
+        return view('admin.product.createOrEdit', compact('type'));
     }
 
     /**
@@ -35,7 +37,8 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $product = Product::create($request->all());
+        return redirect()->route('admin.product.index')->with('status', 'Product created!');
     }
 
     /**
@@ -57,7 +60,8 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        //
+        $type = "edit";
+        return view('admin.product.createOrEdit', compact('type', 'product'));
     }
 
     /**
@@ -69,7 +73,8 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        //
+        $product->update($request->all());
+        return redirect()->route('admin.product.index')->with('status', 'Product updated!');
     }
 
     /**
@@ -80,6 +85,7 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        //
+        $product->delete();
+        return redirect()->route('admin.product.index')->with('status', 'Product deleted!');
     }
 }
