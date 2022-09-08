@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class MainController extends Controller
@@ -47,11 +49,13 @@ class MainController extends Controller
     }
 
     public function shop(){
-        return view('shop.shop-left-sidebar');
+        $products = Product::with("category")->paginate(12);
+        $categories = Category::all();
+        return view('shop.shop-left-sidebar', compact('products', 'categories'));
     }
 
-    public function product($id){
-        return view('product.single-product', compact('id'));
+    public function product(Product $product){
+        return view('product.single-product', compact('product'));
     }
     
     public function blog(){

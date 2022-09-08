@@ -11,8 +11,11 @@
                 <td>ID</td>
                 <td>Name</td>
                 <td>Sku</td>
-                <td>Description</td>
+                <td class="w-25">Description</td>
                 <td>Category</td>
+                <td>Is New</td>
+                <td>Price</td>
+                <td>Discount</td>
                 <td>Tags</td>
                 <td>Created at</td>
                 <td>Actions</td>
@@ -26,6 +29,9 @@
                     <td>{{ $product->sku }}</td>
                     <td title="{{ $product->description }}">{{ Str::limit($product->description, 150) }}</td>
                     <td>{{ $product->category->name }}</td>
+                    <td>{{ $product->new ? "True": "False" }}</td>
+                    <td>{{ $product->price_view() }}</td>
+                    <td>{{ $product->discount_view() }}</td>
                     <td>{{ $product->tags_view() }}</td>
                     <td>{{ $product->created_at }}</td>
                     <td>

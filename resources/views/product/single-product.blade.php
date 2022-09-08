@@ -102,10 +102,10 @@
                 </div>
                 <div class="col-lg-6 col-sm-12 col-xs-12" data-aos="fade-up" data-aos-delay="200">
                     <div class="product-details-content quickview-content ml-25px">
-                        <h2>Modern Smart Phone</h2>
+                        <h2>{{$product->name}}</h2>
                         <div class="pricing-meta">
                             <ul class="d-flex">
-                                <li class="new-price">$20.90</li>
+                                <li class="new-price">{{$product->price_view(true)}}</li>
                             </ul>
                         </div>
                         <div class="pro-details-rating-wrap">
@@ -118,37 +118,31 @@
                             </div>
                             <span class="read-review"><a class="reviews" href="#">(5 Customer Review)</a></span>
                         </div>
-                        <p class="mt-30px">Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmll tempor
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad mill veniam, quis nostrud exercitation
-                            ullamco laboris nisi ut aliquip exet commodo consequat. Duis aute irure dolor</p>
+                        <p class="mt-30px">{{$product->description}}</p>
                         <div class="pro-details-categories-info pro-details-same-style d-flex m-0">
                             <span>SKU:</span>
                             <ul class="d-flex">
                                 <li>
-                                    <a href="#">Ch-256xl</a>
+                                    <a href="#">{{$product->sku}}</a>
                                 </li>
                             </ul>
                         </div>
                         <div class="pro-details-categories-info pro-details-same-style d-flex m-0">
-                            <span>Categories: </span>
+                            <span>Category: </span>
                             <ul class="d-flex">
                                 <li>
-                                    <a href="#">Smart Device, </a>
-                                </li>
-                                <li>
-                                    <a href="#">ETC</a>
+                                    <a href="#">{{$product->category->name}}</a>
                                 </li>
                             </ul>
                         </div>
                         <div class="pro-details-categories-info pro-details-same-style d-flex m-0">
                             <span>Tags: </span>
                             <ul class="d-flex">
-                                <li>
-                                    <a href="#">Smart Device, </a>
-                                </li>
-                                <li>
-                                    <a href="#">Phone</a>
-                                </li>
+                                @foreach ($product->tags as $tag)
+                                    <li>
+                                        <a href="#">{{$tag->name}}</a>
+                                    </li>
+                                @endforeach
                             </ul>
                         </div>
                         <div class="pro-details-quality">
@@ -170,13 +164,11 @@
                     <!-- product details description area start -->
                     <div class="description-review-wrapper">
                         <div class="description-review-topbar nav">
-                            <button data-bs-toggle="tab" data-bs-target="#des-details2">Information</button>
-                            <button class="active" data-bs-toggle="tab"
-                                data-bs-target="#des-details1">Description</button>
-                            <button data-bs-toggle="tab" data-bs-target="#des-details3">Reviews (02)</button>
+                            <button data-bs-toggle="tab" data-bs-target="#des-details2" class="active">Information</button>
+                            <button data-bs-toggle="tab" data-bs-target="#des-details3">Reviews (2)</button>
                         </div>
                         <div class="tab-content description-review-bottom">
-                            <div id="des-details2" class="tab-pane">
+                            <div id="des-details2" class="tab-pane active">
                                 <div class="product-anotherinfo-wrapper text-start">
                                     <ul>
                                         <li><span>Weight</span> 400 g</li>
@@ -185,17 +177,6 @@
                                         <li><span>Other Info</span> American heirloom jean shorts pug seitan letterpress
                                         </li>
                                     </ul>
-                                </div>
-                            </div>
-                            <div id="des-details1" class="tab-pane active">
-                                <div class="product-description-wrapper">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius tempor incidid
-                                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                        ullamco laboris nisi ut aliquip efgx ea co consequat. Duis aute irure dolor in
-                                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                        Excepteur sint occae cupidatat non proident, sunt in culpa qui
-                                    </p>
                                 </div>
                             </div>
                             <div id="des-details3" class="tab-pane">

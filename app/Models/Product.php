@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use App\Models\Category;
-use App\Models\TagRelation;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -12,7 +11,11 @@ class Product extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = ["name", "sku", "description", "category_id"];
+    protected $fillable = ["name", "sku", "description", "new", "price", "discount", "category_id"];
+
+    protected $casts = [
+        'new' => 'boolean',
+    ];
 
     public function category(){
         return $this->belongsTo(Category::class);
@@ -28,5 +31,15 @@ class Product extends Model
             $tags[] = $tag->name;
         }
         return implode(", ", $tags);
+    }
+
+    public function price_view($discount = false){
+        $price = $this->price;
+        if($discount) $price += ($this->discount / 100) * $price;
+        return "$".number_format($price, 2, '.', ' ');
+    }
+
+    public function discount_view(){
+        return round($this->discount)."%";
     }
 }

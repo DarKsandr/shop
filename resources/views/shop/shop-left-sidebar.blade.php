@@ -27,7 +27,6 @@
             <div class="col-lg-9 order-lg-last col-md-12 order-md-first">
                 <!-- Shop Top Area Start -->
                 <div class="shop-top-bar d-flex">
-                    <p class="compare-product"> <span>12</span> Product Found of <span>30</span></p>
                     <!-- Left Side End -->
                     <div class="shop-tab nav">
                         <button class="active" data-bs-target="#shop-grid" data-bs-toggle="tab">
@@ -68,47 +67,49 @@
                             <div class="tab-content">
                                 <div class="tab-pane fade show active" id="shop-grid">
                                     <div class="row mb-n-30px">
-                                        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 mb-30px">
-                                            <!-- Single Prodect -->
-                                            <div class="product">
-                                                <span class="badges">
-                                                    <span class="new">New</span>
-                                                </span>
-                                                <div class="thumb">
-                                                    <a href="{{route('product', 1)}}" class="image">
-                                                        <img src="/assets/images/product-image/1.webp" alt="Product" />
-                                                        <img class="hover-image"
-                                                            src="/assets/images/product-image/1.webp" alt="Product" />
-                                                    </a>
-                                                </div>
-                                                <div class="content">
-                                                    <span class="category"><a href="#">Accessories</a></span>
-                                                    <h5 class="title"><a href="{{route('product', 1)}}">Modern Smart Phone
-                                                        </a>
-                                                    </h5>
-                                                    <span class="price">
-                                                        <span class="new">$38.50</span>
+                                        @foreach ($products as $product)
+                                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 mb-30px">
+                                                <!-- Single Prodect -->
+                                                <div class="product">
+                                                    <span class="badges">
+                                                        @include('shop.badges')
                                                     </span>
-                                                </div>
-                                                <div class="actions">
-                                                    <button title="Add To Cart" class="action add-to-cart"
-                                                        data-bs-toggle="modal" data-bs-target="#exampleModal-Cart"><i
-                                                            class="pe-7s-shopbag"></i></button>
-                                                    <button class="action wishlist" title="Wishlist"
-                                                        data-bs-toggle="modal"
-                                                        data-bs-target="#exampleModal-Wishlist"><i
-                                                            class="pe-7s-like"></i></button>
-                                                    <button class="action quickview" data-link-action="quickview"
-                                                        title="Quick view" data-bs-toggle="modal"
-                                                        data-bs-target="#exampleModal"><i
-                                                            class="pe-7s-look"></i></button>
-                                                    <button class="action compare" title="Compare"
-                                                        data-bs-toggle="modal" data-bs-target="#exampleModal-Compare"><i
-                                                            class="pe-7s-refresh-2"></i></button>
+                                                    <div class="thumb">
+                                                        <a href="{{route('product', $product->id)}}" class="image">
+                                                            <img src="/assets/images/product-image/1.webp" alt="Product" />
+                                                            <img class="hover-image"
+                                                                src="/assets/images/product-image/1.webp" alt="Product" />
+                                                        </a>
+                                                    </div>
+                                                    <div class="content">
+                                                        <span class="category"><a href="#">{{$product->category->name}}</a></span>
+                                                        <h5 class="title"><a href="{{route('product', $product->id)}}">{{$product->name}}
+                                                            </a>
+                                                        </h5>
+                                                        <span class="price">
+                                                            @include('shop.price')
+                                                        </span>
+                                                    </div>
+                                                    <div class="actions">
+                                                        <button title="Add To Cart" class="action add-to-cart"
+                                                            data-bs-toggle="modal" data-bs-target="#exampleModal-Cart"><i
+                                                                class="pe-7s-shopbag"></i></button>
+                                                        <button class="action wishlist" title="Wishlist"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#exampleModal-Wishlist"><i
+                                                                class="pe-7s-like"></i></button>
+                                                        <button class="action quickview" data-link-action="quickview"
+                                                            title="Quick view" data-bs-toggle="modal"
+                                                            data-bs-target="#exampleModal"><i
+                                                                class="pe-7s-look"></i></button>
+                                                        <button class="action compare" title="Compare"
+                                                            data-bs-toggle="modal" data-bs-target="#exampleModal-Compare"><i
+                                                                class="pe-7s-refresh-2"></i></button>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 mb-30px">
+                                        @endforeach
+                                        {{-- <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 mb-30px">
                                             <!-- Single Prodect -->
                                             <div class="product">
                                                 <span class="badges">
@@ -583,69 +584,67 @@
                                                             class="pe-7s-refresh-2"></i></button>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> --}}
                                     </div>
                                 </div>
                                 <div class="tab-pane fade mb-n-30px" id="shop-list">
-                                    <div class="shop-list-wrapper mb-30px">
-                                        <div class="row">
-                                            <div class="col-md-5 col-lg-5 col-xl-4 mb-lm-30px">
-                                                <div class="product">
-                                                    <div class="thumb">
-                                                        <a href="{{route('product', 1)}}" class="image">
-                                                            <img src="/assets/images/product-image/1.webp"
-                                                                alt="Product" />
-                                                            <img class="hover-image"
-                                                                src="/assets/images/product-image/1.webp"
-                                                                alt="Product" />
-                                                        </a>
-                                                        <span class="badges">
-                                                            <span class="new">New</span>
-                                                        </span>
+                                    @foreach ($products as $product)
+                                        <div class="shop-list-wrapper mb-30px">
+                                            <div class="row">
+                                                <div class="col-md-5 col-lg-5 col-xl-4 mb-lm-30px">
+                                                    <div class="product">
+                                                        <div class="thumb">
+                                                            <a href="{{route('product', $product->id)}}" class="image">
+                                                                <img src="/assets/images/product-image/1.webp"
+                                                                    alt="Product" />
+                                                                <img class="hover-image"
+                                                                    src="/assets/images/product-image/1.webp"
+                                                                    alt="Product" />
+                                                            </a>
+                                                            <span class="badges">
+                                                                @include('shop.badges')
+                                                            </span>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-md-7 col-lg-7 col-xl-8">
-                                                <div class="content-desc-wrap">
-                                                    <div class="content">
-                                                        <span class="category"><a
-                                                                href="#">Accessories</a></span>
-                                                        <h5 class="title"><a href="{{route('product', 1)}}">Modern Smart
-                                                                Phone</a></h5>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                                            sed do eiusmodol tempor incididunt ut labore et dolore
-                                                            magna aliqua. Ut enim ad minim veni quis nostrud
-                                                            exercitation ullamco laboris </p>
-                                                    </div>
-                                                    <div class="box-inner">
-                                                        <span class="price">
-                                                            <span class="new">$38.50</span>
-                                                        </span>
-                                                        <div class="actions">
-                                                            <button title="Add To Cart" class="action add-to-cart"
-                                                                data-bs-toggle="modal"
-                                                                data-bs-target="#exampleModal-Cart"><i
-                                                                    class="pe-7s-shopbag"></i></button>
-                                                            <button class="action wishlist" title="Wishlist"
-                                                                data-bs-toggle="modal"
-                                                                data-bs-target="#exampleModal-Wishlist"><i
-                                                                    class="pe-7s-like"></i></button>
-                                                            <button class="action quickview"
-                                                                data-link-action="quickview" title="Quick view"
-                                                                data-bs-toggle="modal"
-                                                                data-bs-target="#exampleModal"><i
-                                                                    class="pe-7s-look"></i></button>
-                                                            <button class="action compare" title="Compare"
-                                                                data-bs-toggle="modal"
-                                                                data-bs-target="#exampleModal-Compare"><i
-                                                                    class="pe-7s-refresh-2"></i></button>
+                                                <div class="col-md-7 col-lg-7 col-xl-8">
+                                                    <div class="content-desc-wrap">
+                                                        <div class="content">
+                                                            <span class="category"><a
+                                                                    href="#">{{$product->category->name}}</a></span>
+                                                            <h5 class="title"><a href="{{route('product', $product->id)}}">{{$product->name}}</a></h5>
+                                                            <p>{{$product->description}}</p>
+                                                        </div>
+                                                        <div class="box-inner">
+                                                            <span class="price">
+                                                                @include('shop.price')
+                                                            </span>
+                                                            <div class="actions">
+                                                                <button title="Add To Cart" class="action add-to-cart"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#exampleModal-Cart"><i
+                                                                        class="pe-7s-shopbag"></i></button>
+                                                                <button class="action wishlist" title="Wishlist"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#exampleModal-Wishlist"><i
+                                                                        class="pe-7s-like"></i></button>
+                                                                <button class="action quickview"
+                                                                    data-link-action="quickview" title="Quick view"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#exampleModal"><i
+                                                                        class="pe-7s-look"></i></button>
+                                                                <button class="action compare" title="Compare"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#exampleModal-Compare"><i
+                                                                        class="pe-7s-refresh-2"></i></button>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="shop-list-wrapper mb-30px">
+                                    @endforeach
+                                    {{-- <div class="shop-list-wrapper mb-30px">
                                         <div class="row">
                                             <div class="col-md-5 col-lg-5 col-xl-4 mb-lm-30px">
                                                 <div class="product">
@@ -1286,29 +1285,14 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- Tab Content Area End -->
                     <!--  Pagination Area Start -->
-                    <div class="pro-pagination-style text-center text-lg-end" data-aos="fade-up"
-                        data-aos-delay="200">
-                        <div class="pages">
-                            <ul>
-                                <li class="li"><a class="page-link" href="#"><i
-                                            class="fa fa-angle-left"></i></a>
-                                </li>
-                                <li class="li"><a class="page-link" href="#">1</a></li>
-                                <li class="li"><a class="page-link active" href="#">2</a></li>
-                                <li class="li"><a class="page-link" href="#">3</a></li>
-                                <li class="li"><a class="page-link" href="#"><i
-                                            class="fa fa-angle-right"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                    {{$products->links()}}
                     <!--  Pagination Area End -->
                 </div>
                 <!-- Shop Bottom Area End -->
@@ -1318,23 +1302,15 @@
                 <div class="shop-sidebar-wrap">
                     <!-- Sidebar single item -->
                     <div class="sidebar-widget">
-                        <h4 class="sidebar-title">Top Categories</h4>
+                        <h4 class="sidebar-title">Categories</h4>
                         <div class="sidebar-widget-category">
                             <ul>
                                 <li><a href="#" class="selected m-0"> All
-                                        <span>(65)</span> </a></li>
-                                <li><a href="#" class=""> Computer
-                                        <span>(12)</span> </a></li>
-                                <li><a href="#" class=""> Covid-19
-                                        <span>(22)</span> </a></li>
-                                <li><a href="#" class=""> Electronics
-                                        <span>(19)</span> </a></li>
-                                <li><a href="#" class=""> Frame Sunglasses
-                                        <span>(17)</span> </a></li>
-                                <li><a href="#" class=""> Furniture
-                                        <span>(7)</span> </a></li>
-                                <li><a href="#" class=""> Genuine Leather
-                                        <span>(9)</span> </a></li>
+                                        <span>({{$products->total()}})</span> </a></li>
+                                @foreach ($categories as $category)
+                                    <li><a href="#" class=""> {{$category->name}}
+                                        <span>({{$category->products()->count()}})</span> </a></li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
@@ -1350,7 +1326,7 @@
                         </div>
                     </div>
                     <!-- Sidebar single item -->
-                    <div class="sidebar-widget">
+                    {{-- <div class="sidebar-widget">
                         <h4 class="sidebar-title">Color</h4>
                         <div class="sidebar-widget-color">
                             <ul class="d-flex flex-wrap">
@@ -1401,7 +1377,7 @@
                                 <li><a href="#" class=""> Xlovgtir<span>(12)</span></a></li>
                             </ul>
                         </div>
-                    </div>
+                    </div> --}}
                     <!-- Sidebar single item -->
                 </div>
             </div>
