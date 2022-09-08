@@ -18,14 +18,14 @@ class Product extends Model
         return $this->belongsTo(Category::class);
     }
 
-    public function tag_relation(){
-        return $this->hasMany(TagRelation::class);
+    public function tags(){
+        return $this->belongsToMany(Tag::class);
     }
 
     public function tags_view(){
         $tags = [];
-        foreach($this->tag_relation as $tag_relation){
-            $tags[] = $tag_relation->tag->name;
+        foreach($this->tags as $tag){
+            $tags[] = $tag->name;
         }
         return implode(", ", $tags);
     }

@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::rename('tags', 'tag_relations');
+        Schema::rename('tags', 'product_tag');
 
         Schema::create('tags', function (Blueprint $table) {
             $table->id();
@@ -21,7 +21,7 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        Schema::table('tag_relations', function (Blueprint $table) {
+        Schema::table('product_tag', function (Blueprint $table) {
             $table->dropColumn('name');
             $table->foreignId('tag_id')->after('product_id');
         });
@@ -36,7 +36,7 @@ return new class extends Migration
     {
         Schema::drop('tags');
 
-        Schema::rename('tag_relations', 'tags');
+        Schema::rename('product_tag', 'tags');
 
         Schema::table('tags', function (Blueprint $table) {
             $table->dropColumn('tag_id');

@@ -14,7 +14,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::with(["category", "tag_relation.tag"])->paginate(15);
+        $products = Product::with(["category", "tags"])->paginate(15);
         return view('admin.product.index', compact('products'));
     }
 

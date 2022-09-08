@@ -23,6 +23,7 @@
     <link href="/assets/admin/plugins/bower_components/chartist/dist/chartist.min.css" rel="stylesheet">
     <link rel="stylesheet"
         href="/assets/admin/plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.css">
+    <link rel="stylesheet" href="/assets/admin/plugins/select2/css/select2.min.css">
     <!-- Custom CSS -->
     <link href="/assets/admin/css/style.min.css" rel="stylesheet">
 
@@ -240,6 +241,7 @@
     <!--chartis chart-->
     <script src="/assets/admin/plugins/bower_components/chartist/dist/chartist.min.js"></script>
     <script src="/assets/admin/plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+    <script src="/assets/admin/plugins/select2/js/select2.min.js"></script>
     @yield('script:after')
 </body>
 
