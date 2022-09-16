@@ -121,7 +121,12 @@
         <div class="row">
             <div class="col">
                 <div class="row mb-n-30px">
-                    <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-xs-6 mb-30px">
+                    @foreach ($new_products as $product)
+                        <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-xs-6 mb-30px">
+                            @include('elements.product-card', ['product' => $product])
+                        </div>
+                    @endforeach
+                    {{-- <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-xs-6 mb-30px">
                         <!-- Single Prodect -->
                         <div class="product">
                             <span class="badges">
@@ -396,7 +401,7 @@
                                     data-bs-target="#exampleModal-Compare"><i class="pe-7s-refresh-2"></i></button>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
@@ -685,8 +690,4 @@
     </div>
 </div>
 <!-- Blog area end here -->
-@endsection
-
-@section('modal')
-    @include('product.modal')
 @endsection

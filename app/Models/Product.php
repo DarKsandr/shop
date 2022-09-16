@@ -42,4 +42,8 @@ class Product extends Model
     public function discount_view(){
         return round($this->discount)."%";
     }
+
+    public function scopeNew($query){
+        $query->where("new", 1);
+    }
 }

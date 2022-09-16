@@ -9,7 +9,8 @@ use Illuminate\Http\Request;
 class MainController extends Controller
 {
     public function index(){
-        return view('index');
+        $new_products = Product::with("category")->new()->inRandomOrder()->limit(8)->get();
+        return view('index', compact('new_products'));
     }
 
     public function about(){
@@ -55,7 +56,8 @@ class MainController extends Controller
     }
 
     public function product(Product $product){
-        return view('product.single-product', compact('product'));
+        $related_products = Product::with("category")->where("category_id", $product->category_id)->inRandomOrder()->limit(16)->get();
+        return view('product.single-product', compact('product', 'related_products'));
     }
     
     public function blog(){

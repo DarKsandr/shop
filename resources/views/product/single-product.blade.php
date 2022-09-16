@@ -309,7 +309,12 @@
                 <div class="col">
                     <div class="new-product-slider swiper-container slider-nav-style-1">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">
+                            @foreach ($related_products as $product)
+                                <div class="swiper-slide">
+                                    @include('elements.product-card', ['product' => $product])
+                                </div>
+                            @endforeach
+                            {{-- <div class="swiper-slide">
                                 <!-- Single Prodect -->
                                 <div class="product">
                                     <span class="badges">
@@ -344,8 +349,8 @@
                                                 class="pe-7s-refresh-2"></i></button>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
+                            </div> --}}
+                            {{-- <div class="swiper-slide">
                                 <!-- Single Prodect -->
                                 <div class="product">
                                     <span class="badges">
@@ -600,7 +605,7 @@
                                                 class="pe-7s-refresh-2"></i></button>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                         <!-- Add Arrows -->
                         <div class="swiper-buttons">
@@ -613,8 +618,4 @@
         </div>
     </div>
     <!-- Product Area End -->
-@endsection
-
-@section('modal')
-    @include('product.modal')
 @endsection
