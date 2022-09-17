@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class MainController extends Controller
 {
     public function index(){
-        $new_products = Product::with("category")->new()->inRandomOrder()->limit(8)->get();
+        $new_products = Product::with(["category", "tags"])->new()->inRandomOrder()->limit(8)->get();
         return view('index', compact('new_products'));
     }
 
@@ -50,13 +50,13 @@ class MainController extends Controller
     }
 
     public function shop(){
-        $products = Product::with("category")->paginate(12);
+        $products = Product::with(["category", "tags"])->paginate(12);
         $categories = Category::all();
         return view('shop.shop-left-sidebar', compact('products', 'categories'));
     }
 
     public function product(Product $product){
-        $related_products = Product::with("category")->where("category_id", $product->category_id)->inRandomOrder()->limit(16)->get();
+        $related_products = Product::with(["category", "tags"])->where("category_id", $product->category_id)->inRandomOrder()->limit(16)->get();
         return view('product.single-product', compact('product', 'related_products'));
     }
     

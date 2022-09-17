@@ -4,8 +4,10 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-use App\Models\Category;
+use App\Models\Tag;
 use App\Models\Product;
+use App\Models\Category;
+use Database\Seeders\TagSeeder;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -26,9 +28,11 @@ class DatabaseSeeder extends Seeder
 
         Category::factory(10)->create();
         Product::factory(100)->create();
+        Tag::factory(200)->create();
 
         $this->call([
             AdminSeeder::class,
+            TagSeeder::class,
         ]);
     }
 }

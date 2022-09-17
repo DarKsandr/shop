@@ -381,11 +381,10 @@
                     <div class="line-shape-top line-height-1">
                         <div class="row flex-md-row-reverse align-items-center">
                             <div class="col-md-6 text-center text-md-end">
-                                <div class="payment-mth"><a href="#"><img class="img img-fluid"
-                                            src="/assets/images/icons/payment.png" alt="payment-image"></a></div>
+                                @include('elements.banks-card')
                             </div>
                             <div class="col-md-6 text-center text-md-start">
-                                <p class="copy-text"> © 2022 - {{\Carbon\Carbon::now()->format("Y")}} <strong>Hmart</strong>.</p>
+                                <p class="copy-text"> © 2022 - {{now()->year}} <strong>Hmart</strong>.</p>
                             </div>
                         </div>
                     </div>
