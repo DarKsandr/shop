@@ -33,10 +33,12 @@ class Product extends Model
         return implode(", ", $tags);
     }
 
-    public function price_view($discount = false){
-        $price = $this->price;
-        if($discount) $price += ($this->discount / 100) * $price;
-        return "$".number_format($price, 2, '.', ' ');
+    protected function getPriceViewAttribute(){
+        return "$".number_format($this->price, 2, '.', ' ');
+    }
+
+    public function getRealPriceViewAttribute(){
+        return "$".number_format($this->real_price, 2, '.', ' ');
     }
 
     public function discount_view(){

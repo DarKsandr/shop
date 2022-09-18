@@ -14,9 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('products', function (Blueprint $table) {
-            $table->decimal('price')->default(0)->after('description');
-            $table->integer('discount')->default(0)->after('price');
-            $table->boolean('new')->default(0)->after('discount');
+            $table->decimal('real_price')->default(0)->after('price');
         });
     }
 
@@ -28,9 +26,7 @@ return new class extends Migration
     public function down()
     {
         Schema::table('products', function (Blueprint $table) {
-            $table->dropColumn('price');
-            $table->dropColumn('new');
-            $table->dropColumn('discount');
+            $table->dropColumn('real_price');
         });
     }
 };

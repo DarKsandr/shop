@@ -1,7 +1,7 @@
 <h2>{{ $product->name }}</h2>
 <div class="pricing-meta">
     <ul class="d-flex">
-        <li class="new-price">{{ $product->price_view(true) }}</li>
+        <li class="new-price">{{ $product->real_price_view }}</li>
     </ul>
 </div>
 <div class="pro-details-rating-wrap">

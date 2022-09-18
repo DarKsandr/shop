@@ -30,7 +30,7 @@
                     <td title="{{ $product->description }}">{{ Str::limit($product->description, 150) }}</td>
                     <td>{{ $product->category->name }}</td>
                     <td>{{ $product->new ? "True": "False" }}</td>
-                    <td>{{ $product->price_view() }}</td>
+                    <td>{{ $product->price_view }}</td>
                     <td>{{ $product->discount_view() }}</td>
                     <td>{{ $product->tags_view() }}</td>
                     <td>{{ $product->created_at }}</td>

@@ -34,6 +34,8 @@ Route::get('/blog', [MainController::class, 'blog'])->name("blog");
 Route::get('/blog/{id}', [MainController::class, 'blog_single'])->name("blog-single");
 Route::get('/checkout', [MainController::class, 'checkout'])->name("checkout");
 
+Route::get('/product_list', [MainController::class, 'product_list'])->name("product_list");
+
 Route::middleware(['auth'])->group(function () {
     Route::get('/my-account', [MainController::class, 'my_account'])->name("my-account");
 

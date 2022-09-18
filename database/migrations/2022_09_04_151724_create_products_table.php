@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Category;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -18,7 +19,7 @@ return new class extends Migration
             $table->string('name', 255);
             $table->string('sku', 128);
             $table->text('description');
-            $table->foreignId('category_id')->constrained();
+            $table->foreignIdFor(Category::class);
             $table->timestamps();
         });
     }

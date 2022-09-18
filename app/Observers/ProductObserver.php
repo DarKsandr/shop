@@ -14,5 +14,9 @@ class ProductObserver
                 $product->tags()->attach($tags);
             }
         }
+
+        if($product->isDirty(["price", "discount"])){
+            $product->real_price = $product->price + ($product->discount / 100) * $product->price;
+        }
     }
 }
