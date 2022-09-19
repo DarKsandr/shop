@@ -316,19 +316,17 @@
         },
     });
 
-    zoomThumb.forEach(item => {
-        new Swiper('.zoom-top', {
-            spaceBetween: 0,
-            slidesPerView: 1,
-            effect: 'fade',
-            fadeEffect: {
-                crossFade: true,
-            },
-            thumbs: {
-                swiper: item
-            }
-        });
-    })
+    new Swiper('.zoom-top', {
+        spaceBetween: 0,
+        slidesPerView: 1,
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true,
+        },
+        thumbs: {
+            swiper: zoomThumb
+        }
+    });
 
     /*---------------------------
             Product Details Slider 

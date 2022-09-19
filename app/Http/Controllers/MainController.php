@@ -54,7 +54,11 @@ class MainController extends Controller
     public function shop(Request $request, ProductAction $action){
         $products = $action->product_items($request);
         $categories = Category::all();
-        return view('shop.shop-left-sidebar', compact('products', 'categories'));
+        $price_filter = (object)[
+            "min" => 0,
+            "max" => Product::max("real_price"),
+        ];
+        return view('shop.shop-left-sidebar', compact('products', 'categories', 'price_filter'));
     }
 
     public function product(Product $product, ProductAction $action){

@@ -1,0 +1,3 @@
+.label-to-bold-if-checked:checked + span{
+    font-weight: bold;
+}

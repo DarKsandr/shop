@@ -12,6 +12,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico" />
     <!-- CSS
     ============================================ -->
+    @yield('style.before')
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/assets/css/font.awesome.css" />
     <link rel="stylesheet" href="/assets/css/pe-icon-7-stroke.css" />
@@ -24,6 +25,7 @@
     <!-- Minify Version -->
     <!-- <link rel="stylesheet" href="/assets/css/plugins.min.css">
     <link rel="stylesheet" href="/assets/css/style.min.css"> -->
+    @yield('style.after')
 </head>
 
 <body>

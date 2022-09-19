@@ -3,7 +3,11 @@
 @section('title', 'Product page')
 
 @section('script.after')
-<script src="{{asset('assets/shop/filter.js')}}"></script>
+    <script src="{{asset('assets/shop/filter.js')}}"></script>
+@endsection
+
+@section('style.after')
+    <link rel="stylesheet" href="{{asset('/assets/shop/filter.css')}}">
 @endsection
 
 @section('content')
@@ -74,11 +78,15 @@
                         <h4 class="sidebar-title">Categories</h4>
                         <div class="sidebar-widget-category">
                             <ul>
-                                <li><a href="#" class="selected m-0"> All
-                                        <span>({{$products->total()}})</span> </a></li>
                                 @foreach ($categories as $category)
-                                    <li><a href="#" class=""> {{$category->name}}
-                                        <span>({{$category->products()->count()}})</span> </a></li>
+                                    <li>
+                                        <label class="w-100">
+                                            <input type="checkbox" value="category[]={{$category->id}}" class="label-to-bold-if-checked d-none checkbox-filter category" @if (in_array($category->id, request()->category ?? []))
+                                                checked
+                                            @endif>
+                                            <span>{{$category->name}} ({{$category->products()->count()}})</span>
+                                        </label>
+                                    </li>
                                 @endforeach
                             </ul>
                         </div>
@@ -90,8 +98,13 @@
                             <div class="price-slider-amount">
                                 <input type="text" id="amount" class="p-0 h-auto lh-1" name="price"
                                     placeholder="Add Your Price" />
+                                <input type="hidden" id="price_min" value="{{request()->price_min ?? $price_filter->min}}">
+                                <input type="hidden" id="price_max" value="{{request()->price_max ?? $price_filter->max}}">
                             </div>
-                            <div id="slider-range"></div>
+                            <div id="slider-range" 
+                                data-min="{{$price_filter->min}}" 
+                                data-max="{{$price_filter->max}}" 
+                            ></div>
                         </div>
                     </div>
                     <!-- Sidebar single item -->
