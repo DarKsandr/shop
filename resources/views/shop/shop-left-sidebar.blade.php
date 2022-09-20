@@ -41,17 +41,23 @@
                     <div class="shop-top-bar d-flex">
                         <!-- Left Side End -->
                         <div class="shop-tab nav">
-                            <button class="active" data-bs-target="#shop-grid" data-bs-toggle="tab">
+                            <button class="shop-view-type @if(!isset($_COOKIE["shop-view-type"]) || $_COOKIE["shop-view-type"] == '#shop-grid')active @endif" data-bs-target="#shop-grid" data-bs-toggle="tab">
                                 <i class="fa fa-th" aria-hidden="true"></i>
                             </button>
-                            <button data-bs-target="#shop-list" data-bs-toggle="tab">
+                            <button data-bs-target="#shop-list" data-bs-toggle="tab" class="shop-view-type @if(($_COOKIE["shop-view-type"] ?? '') == '#shop-list')active @endif">
                                 <i class="fa fa-list" aria-hidden="true"></i>
                             </button>
                         </div>
                         <!-- Right Side Start -->
                         <div class="form-floating">
                             <select class="form-select" id="sort" aria-label="Floating label select example">
-                                @foreach ([(object) ['value' => '', 'title' => 'Default'], (object) ['value' => 'search[sort]=name&search[sort_type]=asc', 'title' => 'Name, A to Z'], (object) ['value' => 'search[sort]=name&search[sort_type]=desc', 'title' => 'Name, Z to A'], (object) ['value' => 'search[sort]=real_price&search[sort_type]=asc', 'title' => 'Price, low to high'], (object) ['value' => 'search[sort]=real_price&search[sort_type]=desc', 'title' => 'Price, high to low']] as $item)
+                                @foreach ([
+                                    (object) ['value' => '', 'title' => 'Default'], 
+                                    (object) ['value' => 'search[sort]=name&search[sort_type]=asc', 'title' => 'Name, A to Z'], 
+                                    (object) ['value' => 'search[sort]=name&search[sort_type]=desc', 'title' => 'Name, Z to A'], 
+                                    (object) ['value' => 'search[sort]=real_price&search[sort_type]=asc', 'title' => 'Price, low to high'], 
+                                    (object) ['value' => 'search[sort]=real_price&search[sort_type]=desc', 'title' => 'Price, high to low']
+                                ] as $item)
                                     <option value="{{ $item->value }}" @if ($item->value ==
                                         'search[sort]=' . request()->get('sort') . '&search[sort_type]=' . request()->get('sort_type')) selected @endif>
                                         {{ $item->title }}</option>

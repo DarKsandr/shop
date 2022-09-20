@@ -2,7 +2,7 @@
 <div class="row">
     <div class="col">
         <div class="tab-content">
-            <div class="tab-pane fade show active" id="shop-grid">
+            <div class="tab-pane fade @if(!isset($_COOKIE["shop-view-type"]) || $_COOKIE["shop-view-type"] == '#shop-grid')active show @endif" id="shop-grid">
                 <div class="row mb-n-30px">
                     @foreach ($products as $product)
                         <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 mb-30px">
@@ -11,7 +11,7 @@
                     @endforeach
                 </div>
             </div>
-            <div class="tab-pane fade mb-n-30px" id="shop-list">
+            <div class="tab-pane fade mb-n-30px @if(($_COOKIE["shop-view-type"] ?? '') == '#shop-list')active show @endif" id="shop-list">
                 @foreach ($products as $product)
                     <div class="shop-list-wrapper mb-30px">
                         <div class="row">

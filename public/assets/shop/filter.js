@@ -25,3 +25,9 @@ async function getProducts(){
     //get
     document.getElementById("product_container").innerHTML = await ( await fetch(`/product_list?${searchParamsString}`) ).text();
 }
+
+document.querySelectorAll(".shop-view-type").forEach(item => {
+    item.addEventListener('click', function(){
+        Cookies.set("shop-view-type", item.dataset.bsTarget);
+    });
+})
