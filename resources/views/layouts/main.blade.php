@@ -45,7 +45,7 @@
                     <div class="col-lg-6 d-none d-lg-block">
                         <div class="search-element">
                             <form action="#">
-                                <input type="text" placeholder="Search" />
+                                <input type="text" placeholder="Search" class="px-3" />
                                 <button><i class="pe-7s-search"></i></button>
                             </form>
                         </div>

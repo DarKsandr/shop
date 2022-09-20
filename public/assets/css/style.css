@@ -192,23 +192,6 @@ button:focus {
           box-shadow: none;
 }
 
-input {
-  display: inline-block;
-  line-height: 50px;
-  height: 50px;
-  font-size: 15px;
-  width: 100%;
-  background: transparent;
-  border-radius: 0;
-  -webkit-border-radius: 0;
-  text-align: left;
-  box-shadow: none;
-  -webkit-box-shadow: none;
-  padding-left: 20px;
-  padding-right: 10px;
-  outline: 0;
-}
-
 .img-responsive {
   max-width: 100%;
   display: block;

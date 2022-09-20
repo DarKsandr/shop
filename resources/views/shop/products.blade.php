@@ -55,19 +55,19 @@
 </div>
 <!-- Tab Content Area End -->
 <!--  Pagination Area Start -->
-<input type="hidden" id="currentPage" value="{{$products->currentPage()}}">
+<input type="hidden" id="currentPage" value="{{ $products->currentPage() }}">
 {{-- <div class="mt-5">{{ $products->links() }}</div> --}}
-<div class="pro-pagination-style text-center text-lg-end" data-aos="fade-up" data-aos-delay="200">
-    <div class="pages">
-        <ul>
-            <li class="li" onclick="setPage(1)"><a class="page-link" href="javascript:void(0)"><i class="fa fa-angle-left"></i></a>
-            </li>
-            @for ($i = 1; $i <= $products->lastPage(); $i++)
-                <li class="li" onclick="setPage({{$i}})"><a class="page-link @if($i == $products->currentPage()) active @endif" href="javascript:void(0)">{{$i}}</a></li>
-            @endfor
-            <li class="li" onclick="setPage({{$products->lastPage()}})"><a class="page-link" href="javascript:void(0)"><i class="fa fa-angle-right"></i></a>
-            </li>
-        </ul>
+@if ($products->lastPage() > 1)
+    <div class="pro-pagination-style text-center text-lg-end" data-aos="fade-up" data-aos-delay="200">
+        <div class="pages">
+            <ul>
+                @for ($i = 1; $i <= $products->lastPage(); $i++)
+                    <li class="li" onclick="setPage({{ $i }})"><a
+                            class="page-link @if ($i == $products->currentPage()) active @endif"
+                            href="javascript:void(0)">{{ $i }}</a></li>
+                @endfor
+            </ul>
+        </div>
     </div>
-</div>
+@endif
 <!--  Pagination Area End -->

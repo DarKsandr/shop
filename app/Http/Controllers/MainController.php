@@ -36,7 +36,7 @@ class MainController extends Controller
     }
 
     public function cart(){
-        return view('cart');
+        return view('cart.cart');
     }
 
     public function wishlist(){
@@ -53,12 +53,7 @@ class MainController extends Controller
 
     public function shop(Request $request, ProductAction $action){
         $products = $action->product_items($request);
-        $categories = Category::all();
-        $price_filter = (object)[
-            "min" => 0,
-            "max" => Product::max("real_price"),
-        ];
-        return view('shop.shop-left-sidebar', compact('products', 'categories', 'price_filter'));
+        return view('shop.shop-left-sidebar', compact('products'));
     }
 
     public function product(Product $product, ProductAction $action){
