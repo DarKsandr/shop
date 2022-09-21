@@ -16,10 +16,15 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
+            $table->softDeletes();
             $table->string('name', 255);
             $table->string('sku', 128);
             $table->text('description');
-            $table->foreignIdFor(Category::class);
+            $table->decimal('price')->default(0);
+            $table->decimal('real_price')->default(0);
+            $table->integer('discount')->default(0);
+            $table->boolean('new')->default(0);
+            $table->foreignIdFor(Category::class)->index();
             $table->timestamps();
         });
     }
