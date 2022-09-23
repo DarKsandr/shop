@@ -35,10 +35,6 @@ class MainController extends Controller
         return view('contact');
     }
 
-    public function cart(){
-        return view('cart.cart');
-    }
-
     public function wishlist(){
         return view('wishlist');
     }

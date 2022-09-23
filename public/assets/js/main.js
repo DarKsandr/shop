@@ -525,3 +525,24 @@
     })
 
 })(jQuery);
+
+async function addCart(form){
+    try {
+        const data = await ( await fetch(`/cart`, {
+            method: "POST",
+            body: form
+        }) ).json();
+        document.getElementById("minicart-product-list").innerHTML = data.cart;
+        document.querySelectorAll(".header-action-num").forEach(item => {
+            item.innerHTML = data.count;
+        })
+    } catch (error) {
+        alert("Произошла ошибка. Попробуйте позже");
+    }
+}
+
+function addCartForm(event){
+    // event.preventDefault();
+    // const form = new FormData(event.target);
+    // addCart(form);
+}

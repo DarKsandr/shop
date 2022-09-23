@@ -22,9 +22,7 @@
     <link rel="stylesheet" href="{{asset('/assets/css/jquery-ui.min.css')}}">
     <!-- Style CSS -->
     <link rel="stylesheet" href="{{asset('/assets/css/style.css')}}">
-    <!-- Minify Version -->
-    <!-- <link rel="stylesheet" href="{{asset('/assets/css/plugins.min.css')}}">
-    <link rel="stylesheet" href="{{asset('/assets/css/style.min.css')}}"> -->
+
     @yield('style.after')
 </head>
 
@@ -50,11 +48,6 @@
     <script src="{{asset('/assets/js/plugins/jquery-ui.min.js')}}"></script>
     <script src="{{asset('/assets/js/plugins/mailchimp-ajax.js')}}"></script>
     <script src="{{asset('/assets/js/plugins/js.cookie.min.js')}}"></script>
-
-    <!-- Minify Version -->
-    <!-- <script src="{{asset('/assets/js/vendor.min.js')}}"></script>
-    <script src="{{asset('/assets/js/plugins.min.js')}}"></script>
-    <script src="{{asset('/assets/js/main.min.js')}}"></script> -->
 
     <!--Main JS (Common Activation Codes)-->
     <script src="{{asset('/assets/js/main.js')}}"></script>

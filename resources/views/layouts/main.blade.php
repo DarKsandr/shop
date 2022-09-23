@@ -35,82 +35,12 @@
         <!-- Header top area end -->
         <!-- Header action area start -->
         <div class="header-bottom  d-none d-lg-block">
-            <div class="container">
-                <div class="row justify-content-between align-items-center">
-                    <div class="col-lg-3 col">
-                        <div class="header-logo">
-                            <a href="{{route('index')}}"><img src="/assets/images/logo/logo.png" alt="Site Logo" /></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 d-none d-lg-block">
-                        <div class="search-element">
-                            <form action="#">
-                                <input type="text" placeholder="Search" class="px-3" />
-                                <button><i class="pe-7s-search"></i></button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col">
-                        <div class="header-actions">
-                            <!-- Single Wedge Start -->
-                            <a href="#offcanvas-wishlist" class="header-action-btn offcanvas-toggle">
-                                <i class="pe-7s-like"></i>
-                            </a>
-                            <!-- Single Wedge End -->
-                            <a href="#offcanvas-cart"
-                                class="header-action-btn header-action-btn-cart offcanvas-toggle pr-0">
-                                <i class="pe-7s-shopbag"></i>
-                                <span class="header-action-num">01</span>
-                                <!-- <span class="cart-amount">€30.00</span> -->
-                            </a>
-                            <a href="#offcanvas-mobile-menu"
-                                class="header-action-btn header-action-btn-menu offcanvas-toggle d-lg-none">
-                                <i class="pe-7s-menu"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @include('layouts-elements.header-container')
         </div>
         <!-- Header action area end -->
         <!-- Header action area start -->
         <div class="header-bottom d-lg-none sticky-nav style-1">
-            <div class="container">
-                <div class="row justify-content-between align-items-center">
-                    <div class="col-lg-3 col">
-                        <div class="header-logo">
-                            <a href="{{route('index')}}"><img src="/assets/images/logo/logo.png" alt="Site Logo" /></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 d-none d-lg-block">
-                        <div class="search-element">
-                            <form action="#">
-                                <input type="text" placeholder="Search" />
-                                <button><i class="pe-7s-search"></i></button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col">
-                        <div class="header-actions">
-                            <!-- Single Wedge Start -->
-                            <a href="#offcanvas-wishlist" class="header-action-btn offcanvas-toggle">
-                                <i class="pe-7s-like"></i>
-                            </a>
-                            <!-- Single Wedge End -->
-                            <a href="#offcanvas-cart"
-                                class="header-action-btn header-action-btn-cart offcanvas-toggle pr-0">
-                                <i class="pe-7s-shopbag"></i>
-                                <span class="header-action-num">01</span>
-                                <!-- <span class="cart-amount">€30.00</span> -->
-                            </a>
-                            <a href="#offcanvas-mobile-menu"
-                                class="header-action-btn header-action-btn-menu offcanvas-toggle d-lg-none">
-                                <i class="pe-7s-menu"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @include('layouts-elements.header-container')
         </div>
         <!-- Header action area end -->
         <!-- header navigation area start -->
@@ -119,7 +49,7 @@
                 <div class="header-nav">
                     <div class="main-menu position-relative">
                         <ul>
-                            @include('menu')
+                            @include('layouts-elements.menu')
                         </ul>
                     </div>
                 </div>
@@ -196,39 +126,13 @@
                 <button class="offcanvas-close">×</button>
             </div>
             <div class="body customScroll">
-                <ul class="minicart-product-list">
-                    <li>
-                        <a href="{{route('product', 1)}}" class="image"><img src="/assets/images/product-image/1.webp"
-                                alt="Cart product Image"></a>
-                        <div class="content">
-                            <a href="{{route('product', 1)}}" class="title">Modern Smart Phone</a>
-                            <span class="quantity-price">1 x <span class="amount">$18.86</span></span>
-                            <a href="#" class="remove">×</a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="{{route('product', 2)}}" class="image"><img src="/assets/images/product-image/2.webp"
-                                alt="Cart product Image"></a>
-                        <div class="content">
-                            <a href="{{route('product', 2)}}" class="title">Bluetooth Headphone</a>
-                            <span class="quantity-price">1 x <span class="amount">$43.28</span></span>
-                            <a href="#" class="remove">×</a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="{{route('product', 3)}}" class="image"><img src="/assets/images/product-image/3.webp"
-                                alt="Cart product Image"></a>
-                        <div class="content">
-                            <a href="{{route('product', 3)}}" class="title">Smart Music Box</a>
-                            <span class="quantity-price">1 x <span class="amount">$37.34</span></span>
-                            <a href="#" class="remove">×</a>
-                        </div>
-                    </li>
+                <ul class="minicart-product-list" id="minicart-product-list">
+                    @include('cart.minicart-product-list')
                 </ul>
             </div>
             <div class="foot">
                 <div class="buttons mt-30px">
-                    <a href="{{route('cart')}}" class="btn btn-dark btn-hover-primary mb-30px">view cart</a>
+                    <a href="{{route('cart.index')}}" class="btn btn-dark btn-hover-primary mb-30px">view cart</a>
                     <a href="{{route('checkout')}}" class="btn btn-outline-dark current-btn">checkout</a>
                 </div>
             </div>
@@ -247,7 +151,7 @@
         <div class="inner customScroll">
             <div class="offcanvas-menu mb-4">
                 <ul>
-                    @include('menu')
+                    @include('layouts-elements.menu')
                 </ul>
             </div>
             <!-- OffCanvas Menu End -->
@@ -325,7 +229,7 @@
                                         <ul class="align-items-center">
                                             <li class="li"><a class="single-link"
                                                     href="{{route('contact')}}">Contact</a></li>
-                                            <li class="li"><a class="single-link" href="{{route('cart')}}">Shopping
+                                            <li class="li"><a class="single-link" href="{{route('cart.index')}}">Shopping
                                                     cart</a></li>
                                             <li class="li"><a class="single-link" href="{{route('shop')}}">Shop</a>
                                             </li>
@@ -346,7 +250,7 @@
                                         <ul class="align-items-center">
                                             <li class="li"><a class="single-link"
                                                     href="{{route('contact')}}">Contact</a></li>
-                                            <li class="li"><a class="single-link" href="{{route('cart')}}">Shopping
+                                            <li class="li"><a class="single-link" href="{{route('cart.index')}}">Shopping
                                                     cart</a></li>
                                             <li class="li"><a class="single-link" href="{{route('shop')}}">Shop</a>
                                             </li>

@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\TagController;
+use App\Http\Controllers\CartController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,7 +25,6 @@ Route::get('/faq', [MainController::class, 'faq'])->name("faq");
 Route::get('/coming-soon', [MainController::class, 'coming_soon'])->name("coming-soon");
 Route::get('/compare', [MainController::class, 'compare'])->name("compare");
 Route::get('/contact', [MainController::class, 'contact'])->name("contact");
-Route::get('/cart', [MainController::class, 'cart'])->name("cart");
 Route::get('/wishlist', [MainController::class, 'wishlist'])->name("wishlist");
 Route::get('/thank-you-page', [MainController::class, 'thank_you_page'])->name("thank-you-page");
 Route::get('/order-tracking', [MainController::class, 'order_tracking'])->name("order-tracking");
@@ -35,6 +35,11 @@ Route::get('/blog/{id}', [MainController::class, 'blog_single'])->name("blog-sin
 Route::get('/checkout', [MainController::class, 'checkout'])->name("checkout");
 
 Route::get('/product_list', [MainController::class, 'product_list'])->name("product_list");
+
+Route::prefix("cart")->name("cart.")->group(function(){
+    Route::get('/', [CartController::class, 'index'])->name("index");
+    Route::post('/', [CartController::class, 'store'])->name("store");
+});
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/my-account', [MainController::class, 'my_account'])->name("my-account");
