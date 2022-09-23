@@ -5,6 +5,21 @@
 [Ссылка на шаблон](https://bootstraptema.ru/stuff/templates_bootstrap/shop/hmart/7-1-0-4989)
 [Ссылка на шаблон админки](https://www.wrappixel.com/templates/ample-admin-lite/?ref=17)
 
+<details>
+  <summary>Скриншоты</summary>
+  
+  ![Image 1](storage/images/1.png)
+  ![Image 2](storage/images/2.png)
+  ![Image 3](storage/images/3.png)
+  ![Image 4](storage/images/4.png)
+  ![Image 5](storage/images/5.png)
+  
+</details>
+
+## VK авторизация
+
+Для авторизации через VK заполнить VK_CLIENT_ID и VK_CLIENT_SECRET в .env
+
 ## Ссылки
 
 [phpmyadmin](http://localhost:8080)
