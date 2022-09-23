@@ -52,5 +52,6 @@
                 </x-button>
             </div>
         </form>
+        <div><a href="{{$vk}}" class="rounded bg-blue-500 px-4 py-1 text-white font-bold text-xs">VK</a></div>
     </x-auth-card>
 </x-guest-layout>
