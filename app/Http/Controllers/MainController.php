@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Actions\ProductAction;
 use App\Models\Category;
 use App\Models\Product;
+use App\Repositories\ProductRepository;
 use Illuminate\Http\Request;
 
 class MainController extends Controller
 {
 
-    public function index(ProductAction $action){
-        $new_products = $action->product()->new()->inRandomOrder()->limit(8)->get();
+    public function index(ProductRepository $repository){
+        $new_products = $repository->product()->new()->inRandomOrder()->limit(8)->get();
         return view('index', compact('new_products'));
     }
 
@@ -47,13 +47,13 @@ class MainController extends Controller
         return view('order-tracking');
     }
 
-    public function shop(Request $request, ProductAction $action){
-        $products = $action->product_items($request);
+    public function shop(Request $request, ProductRepository $repository){
+        $products = $repository->product_items($request);
         return view('shop.shop-left-sidebar', compact('products'));
     }
 
-    public function product(Product $product, ProductAction $action){
-        $related_products = $action->product()->where("category_id", $product->category_id)->inRandomOrder()->limit(16)->get();
+    public function product(Product $product, ProductRepository $repository){
+        $related_products = $repository->product()->where("category_id", $product->category_id)->inRandomOrder()->limit(16)->get();
         return view('product.single-product', compact('product', 'related_products'));
     }
     
@@ -73,8 +73,8 @@ class MainController extends Controller
         return view('my-account');
     }
 
-    public function product_list(Request $request, ProductAction $action){
-        $products = $action->product_items($request);
+    public function product_list(Request $request, ProductRepository $repository){
+        $products = $repository->product_items($request);
         return view('shop.products', compact('products'));
     }
 }

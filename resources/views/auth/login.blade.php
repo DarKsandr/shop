@@ -52,6 +52,8 @@
                 </x-button>
             </div>
         </form>
+        @if($vk)
         <div><a href="{{$vk}}" class="rounded bg-blue-500 px-4 py-1 text-white font-bold text-xs">VK</a></div>
+        @endif
     </x-auth-card>
 </x-guest-layout>

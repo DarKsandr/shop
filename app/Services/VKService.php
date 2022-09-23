@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Actions;
+namespace App\Services;
 
 use VK\OAuth\VKOAuth;
 use VK\Client\VKApiClient;
 
-class VKAction{
+class VKService{
 
     private $vk;
     private $access_token = false;

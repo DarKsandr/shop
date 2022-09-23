@@ -2,15 +2,12 @@
 
 namespace App\Http\Controllers\Auth;
 
-use VK\OAuth\VKOAuth;
 use Illuminate\Http\Request;
-use VK\OAuth\VKOAuthDisplay;
-use VK\OAuth\VKOAuthResponseType;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
-use VK\OAuth\Scopes\VKOAuthUserScope;
 use App\Providers\RouteServiceProvider;
 use App\Http\Requests\Auth\LoginRequest;
+use App\Services\VKAuthService;
 
 class AuthenticatedSessionController extends Controller
 {
@@ -19,16 +16,10 @@ class AuthenticatedSessionController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function create()
+    public function create(VKAuthService $service)
     {
-        $oauth = new VKOAuth();
-        $client_id = env("VK_CLIENT_ID");
-        $redirect_uri = route("vk.login"); 
-        $display = VKOAuthDisplay::PAGE;
-        $scope = array(VKOAuthUserScope::WALL, VKOAuthUserScope::GROUPS, VKOAuthUserScope::EMAIL);
-        
         return view('auth.login', [
-            "vk" => $oauth->getAuthorizeUrl(VKOAuthResponseType::CODE, $client_id, $redirect_uri, $display, $scope),
+            "vk" => $service->get_link(),
         ]);
     }
 

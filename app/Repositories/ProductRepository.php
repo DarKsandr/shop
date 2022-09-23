@@ -1,12 +1,11 @@
 <?php
 
-namespace App\Actions;
+namespace App\Repositories;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
 
-class ProductAction{
-
+class ProductRepository{
     public function product(){
         return Product::with(["category"]);
     }
@@ -25,5 +24,4 @@ class ProductAction{
         
         return $products->paginate(12);
     }
-
 }
