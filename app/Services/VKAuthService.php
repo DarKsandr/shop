@@ -9,14 +9,20 @@ use VK\OAuth\VKOAuthResponseType;
 use VK\OAuth\Scopes\VKOAuthUserScope;
 
 class VKAuthService{
+
+    private $oauth;
+
+    public function __construct(VKOAuth $oauth){
+        $this->oauth = $oauth;
+    }
+
     public function get_link(){
-        $oauth = new VKOAuth();
-        $client_id = env("VK_CLIENT_ID", false);
+        $client_id = config("vk.VK_CLIENT_ID", false);
         if($client_id){
             $redirect_uri = route("vk.login"); 
             $display = VKOAuthDisplay::PAGE;
             $scope = array(VKOAuthUserScope::WALL, VKOAuthUserScope::GROUPS, VKOAuthUserScope::EMAIL);
-            $vk = $oauth->getAuthorizeUrl(VKOAuthResponseType::CODE, $client_id, $redirect_uri, $display, $scope);
+            $vk = $this->oauth->getAuthorizeUrl(VKOAuthResponseType::CODE, $client_id, $redirect_uri, $display, $scope);
         }
         return $vk ?? false;
     }

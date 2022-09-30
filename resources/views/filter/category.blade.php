@@ -10,7 +10,7 @@
                             class="label-to-bold-if-checked d-none category-filter category"
                             @if (in_array($category->id, request()->search['category'] ?? [])) checked @endif>
                         <span>{{ $category->name }}
-                            ({{ $category->products()->count() }})
+                            ({{ $category->products_count }})
                         </span>
                     </label>
                 </li>

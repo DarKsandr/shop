@@ -26,11 +26,7 @@ class Product extends Model
     }
 
     public function tags_view(){
-        $tags = [];
-        foreach($this->tags as $tag){
-            $tags[] = $tag->name;
-        }
-        return implode(", ", $tags);
+        return $this->tags->pluck("name")->join(', ');
     }
 
     protected function getPriceViewAttribute(){

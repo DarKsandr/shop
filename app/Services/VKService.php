@@ -8,21 +8,22 @@ use VK\Client\VKApiClient;
 class VKService{
 
     private $vk;
+    private $oauth;
     private $access_token = false;
     private $email;
     private $user_id;
 
-    public function __construct(VKApiClient $vk){
+    public function __construct(VKApiClient $vk, VKOAuth $oauth){
         $this->vk = $vk;
+        $this->oauth = $oauth;
     }
 
     public function getToken(string $code){
-        $oauth = new VKOAuth();
-        $client_id = env("VK_CLIENT_ID");
-        $client_secret = env("VK_CLIENT_SECRET");
+        $client_id = config("vk.VK_CLIENT_ID");
+        $client_secret = config("vk.VK_CLIENT_SECRET");
         $redirect_uri = route("vk.login");
 
-        $response = $oauth->getAccessToken($client_id, $client_secret, $redirect_uri, $code);
+        $response = $this->oauth->getAccessToken($client_id, $client_secret, $redirect_uri, $code);
 
         $this->access_token = $response["access_token"];
         $this->email = $response["email"];

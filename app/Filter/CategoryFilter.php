@@ -7,7 +7,7 @@ use App\Filter\FilterInterface;
 
 class CategoryFilter implements FilterInterface{
     public function template(){
-        $categories = Category::all();
+        $categories = Category::withCount("products")->get();
         return view("filter.category", compact('categories'));
     }
 
