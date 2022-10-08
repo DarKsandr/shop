@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Services\ProductService;
 
 class ProductController extends Controller
 {
@@ -36,9 +37,10 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, ProductService $service)
     {
         $product = Product::create($request->all());
+        $service->storeOrUpdate($request, $product);
         return redirect()->route('admin.product.index')->with('status', 'Product created!');
     }
 
@@ -72,9 +74,10 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
+    public function update(Request $request, Product $product, ProductService $service)
     {
         $product->update($request->all());
+        $service->storeOrUpdate($request, $product);
         return redirect()->route('admin.product.index')->with('status', 'Product updated!');
     }
 

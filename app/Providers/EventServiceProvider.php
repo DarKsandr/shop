@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Events\ProductTags;
+use App\Listeners\ChangeProductTags;
 use App\Models\Product;
 use App\Observers\ProductObserver;
 use Illuminate\Auth\Events\Registered;
@@ -19,6 +21,9 @@ class EventServiceProvider extends ServiceProvider
     protected $listen = [
         Registered::class => [
             SendEmailVerificationNotification::class,
+        ],
+        ProductTags::class => [
+            ChangeProductTags::class,
         ],
     ];
 
