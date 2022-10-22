@@ -2,7 +2,8 @@
 
 @section('title', 'Product page')
 
-@section('script.after')
+@section('script:after')
+    @parent
     <script src="{{ asset('assets/shop/filter.js') }}"></script>
 
     @foreach (config('filter.items') as $item)
@@ -10,7 +11,8 @@
     @endforeach
 @endsection
 
-@section('style.after')
+@section('style:after')
+    @parent
     <link rel="stylesheet" href="{{ asset('/assets/shop/filter.css') }}">
 @endsection
 

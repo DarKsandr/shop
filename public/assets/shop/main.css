@@ -1,0 +1,17 @@
+#search-list{
+    background-color: white;
+    margin-top: 10px;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+}
+#search-list>li{
+    padding: 5px 10px;
+}
+#search-list>li.search-item{
+    cursor: pointer;
+}
+#search-list>li.search-item:hover{
+    background-color: rgb(214, 214, 214);
+}

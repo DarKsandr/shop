@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\SearchRequest;
+use App\Manticore\Index\ProductsIndex;
 use App\Models\Category;
 use App\Models\Product;
 use App\Repositories\ProductRepository;
 use Illuminate\Http\Request;
+use Manticoresearch\Search;
 
 class MainController extends Controller
 {
@@ -76,5 +79,19 @@ class MainController extends Controller
     public function product_list(Request $request, ProductRepository $repository){
         $products = $repository->product_items($request);
         return view('shop.products', compact('products'));
+    }
+
+    public function search(SearchRequest $request, ProductsIndex $index){
+        $results = $index->search(addcslashes($request->search, `!"$'()-/<@\^|~`))->limit(10)->get();
+        $items = [];
+        foreach($results as $doc){
+            $element = [];
+            $element['id'] = $doc->getId();
+            foreach($doc->getData() as $field => $value){
+                $element[$field] = $value;
+            }
+            $items[] = $element;
+        }
+        return response(["items" => $items]);
     }
 }

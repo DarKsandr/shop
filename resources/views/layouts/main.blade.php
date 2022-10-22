@@ -35,7 +35,7 @@
         <!-- Header top area end -->
         <!-- Header action area start -->
         <div class="header-bottom  d-none d-lg-block">
-            @include('layouts-elements.header-container')
+            @include('layouts-elements.header-container', ['search' => true])
         </div>
         <!-- Header action area end -->
         <!-- Header action area start -->
@@ -298,4 +298,12 @@
     </div>
     <!-- Footer Area End -->
 </div>
+@endsection
+
+@section('style:after')
+    <link rel="stylesheet" href="{{ asset('/assets/shop/main.css') }}">
+@endsection
+
+@section('script:after')
+    <script src="{{asset('assets/shop/main.js')}}"></script>
 @endsection

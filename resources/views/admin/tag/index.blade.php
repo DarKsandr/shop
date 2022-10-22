@@ -25,6 +25,7 @@
                             <a href="{{ route('admin.tag.edit', $tag->id) }}" class="btn btn-primary">Edit</a>
                             <form action="{{ route('admin.tag.destroy', $tag->id) }}" method="post">
                                 @method('DELETE')
+                                @csrf
                                 <button type="submit" class="btn btn-danger">Delete</button>
                             </form>
                         </div>

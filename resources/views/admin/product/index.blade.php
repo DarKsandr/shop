@@ -39,6 +39,7 @@
                             <a href="{{ route('admin.product.edit', $product->id) }}" class="btn btn-primary">Edit</a>
                             <form action="{{ route('admin.product.destroy', $product->id) }}" method="post">
                                 @method('DELETE')
+                                @csrf
                                 <button type="submit" class="btn btn-danger">Delete</button>
                             </form>
                         </div>

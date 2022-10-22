@@ -8,11 +8,12 @@
     <title>Hmart - @yield('title', 'One')</title>
     <meta name="robots" content="index, follow" />
     <meta name="description" content="Hmart-Smart Product eCommerce html Template">
+    @csrf
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('/assets/images/favicon.ico')}}" />
     <!-- CSS
     ============================================ -->
-    @yield('style.before')
+    @yield('style:before')
     <link rel="stylesheet" href="{{asset('/assets/css/bootstrap.min.css')}}" />
     <link rel="stylesheet" href="{{asset('/assets/css/font.awesome.css')}}" />
     <link rel="stylesheet" href="{{asset('/assets/css/pe-icon-7-stroke.css')}}" />
@@ -23,7 +24,7 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="{{asset('/assets/css/style.css')}}">
 
-    @yield('style.after')
+    @yield('style:after')
 </head>
 
 <body>
@@ -31,7 +32,7 @@
 
     @yield('modal')
 
-    @yield('script.before')
+    @yield('script:before')
 
     @section('script')
     <!-- Global Vendor, plugins JS -->
@@ -50,10 +51,11 @@
     <script src="{{asset('/assets/js/plugins/js.cookie.min.js')}}"></script>
 
     <!--Main JS (Common Activation Codes)-->
+    <script src="{{asset('/assets/js/ajax.js')}}"></script>
     <script src="{{asset('/assets/js/main.js')}}"></script>
     @show
 
-    @yield('script.after')
+    @yield('script:after')
 </body>
 
 </html>

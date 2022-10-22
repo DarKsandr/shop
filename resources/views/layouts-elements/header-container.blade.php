@@ -5,14 +5,18 @@
                 <a href="{{ route('index') }}"><img src="/assets/images/logo/logo.png" alt="Site Logo" /></a>
             </div>
         </div>
+        @if(isset($search))
         <div class="col-lg-6 d-none d-lg-block">
             <div class="search-element">
-                <form action="#">
-                    <input type="text" placeholder="Search" />
+                <form id="search-form">
+                    <input type="hidden" id="route-product" value="{{route('product', '@id')}}">
+                    <input type="text" placeholder="Search..." id="search" class="p-2" autocomplete="off"/>
                     <button><i class="pe-7s-search"></i></button>
+                    <ul id="search-list" style="display:none;"></ul>
                 </form>
             </div>
         </div>
+        @endif
         <div class="col-lg-3 col">
             <div class="header-actions">
                 <!-- Single Wedge Start -->

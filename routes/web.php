@@ -36,6 +36,8 @@ Route::get('/checkout', [MainController::class, 'checkout'])->name("checkout");
 
 Route::get('/product_list', [MainController::class, 'product_list'])->name("product_list");
 
+Route::post('/search', [MainController::class, 'search'])->name("search");
+
 Route::prefix("cart")->name("cart.")->group(function(){
     Route::get('/', [CartController::class, 'index'])->name("index");
     Route::post('/', [CartController::class, 'store'])->name("store");
