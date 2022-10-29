@@ -38,9 +38,11 @@ class ManticoreIndex extends Command
             'description'=>['type'=>'text'],
             'real_price'=>['type'=>'float'],
         ], [
-            'morphology' => 'stem_en,stem_ru',
+            'wordforms' => '/var/lib/manticore/wordforms.txt',
+            // 'morphology' => 'stem_en,stem_ru',
             'expand_keywords' => 1,
             'min_infix_len' => 3,
+            'charset_table' => 'english, russian',
         ]);
 
         $bar = $this->output->createProgressBar(Product::count());
@@ -58,5 +60,6 @@ class ManticoreIndex extends Command
         });
 
         $bar->finish();
+        echo "\n";
     }
 }

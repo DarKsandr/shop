@@ -93,6 +93,7 @@ services:
             - ./docker/manticore/data:/var/lib/manticore
             - ./docker/manticore/share/en.pak:/usr/share/manticore/en.pak
             - ./docker/manticore/share/ru.pak:/usr/share/manticore/ru.pak
+            - ./docker/manticore/path/to/wordforms.txt:/var/lib/manticore/wordforms.txt
             #- ./manticore.conf:/etc/manticoresearch/manticore.conf # uncommment if you use a custom config
         networks:
             - sail
